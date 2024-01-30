@@ -14,6 +14,9 @@ import frogfood from './images/frogfood.jpg';
 import froglogo from './images/froglogo.png';
 
 
+import banana from './images/FoodofStar.png';
+import ForceofEvil from './images/ForceofEvil.jpg';
+
 
 function App() {
   const ingredients = [" 1 boneless ribeye (the size of your bread)", " 2 sprigs thyme", " 2 sprigs rosemary", " Salt & freshly ground pepper", " 1 lobster soul", " 1 cup vegetable oil", " Juice of 1 lemon", " 3 egg yolks", " 1/2 pound bacon", " 1 Cornish game hen, deboned", " 3 thinly sliced rounds of Vidalia onion, plus more for tear-gathering", " 1 large, long sourdough loaf", " 3 Tbsp cream cheese", " 3 Tbsp fresh dill, picked", " 1 dill pickle, sliced thinly", " 1 egg, hard-boiled, peeled, and sliced", " 10 thin slices of cucumber", " 8 thin slices of Roma tomato", " 2 tsp tears", " 1 bird from the counter"];
@@ -40,12 +43,18 @@ const directions3 = [
   "To unmold, run a knife around edge of flan. Place a large plate over cake pan and invert. Remove cake pan and serve flan cold.",
   "Enjoy!"
 ];
-
 const ingredients4 = ["2 cups ground beef", "1/4 cup breadcrumbs", "1/4 cup chopped onions", "1/4 cup chopped pickles", "1/4 cup ketchup", "1/4 cup mustard", "1/4 teaspoon salt", "1/4 teaspoon pepper", "4 hamburger buns"]
 const directions4 = ["In a large bowl, add ground beef  and seasonings and shape into four patties", 
 "Grill, covered, over medium heat or broil 4 in.", "Heat for 5-7 minutes on each side or until a thermometer reads 160° and juices run clear.", 
 "Serve on buns.",
-"Enjoy!"]
+"Enjoy!"];
+
+const ingredients7 =["4 ripe bananas, Yellow food coloring"];
+const directions7 = [
+  "Peel and thinly slice the bananas. Freeze the banana slices for at least two hours. Place the frozen banana slices in a food processor.",
+  "Blend, occasionally scraping down the sides of the bowl, until the bananas are smooth and creamy. Add a few drops of yellow food coloring and blend until the color is evenly distributed.",
+  "Serve immediately or freeze for later. Enjoy!"
+];
 
 const ingredients5 = ["3/4 cup lukewarm water, 3 1/2 teaspoons active dry yeast, 2 large eggs, 1/2 cup whole milk, 3 tablespoons unsalted butter, melted, 1/4 cup granulated sugar, plus 2 tablespoons, 4 ups bread flour, plus more for dusting, 1/2 teaspoon kosher salt, 8 cups canola oil, for frying, powdered sugar (for topping)"];
 const directions5 = ["Pour the water into a medium bowl or large liquid measuring cup and sprinkle the yeast over the top. Let stand for about 5 minutes, until foamy.",
@@ -100,6 +109,14 @@ const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
         description="In the classic episode 'The Great Fusilli,' Courage the Cowardly Dog must save Muriel from the clutches of the evil Fusilli, who plans to turn her into a flan! In this recipe, we'll be making a flan of our own, with a rich caramel sauce and a creamy custard filling."
         ingredients={ingredients3}
         directions={directions3}
+        />
+        <Accordion
+        header_Image={ForceofEvil}
+        accordion_Image={banana}
+        title={"Star vs. Forces of Evil: Banagic IceCream"}
+        description="The Banagic Ice Cream is a magical treat from the show Star vs. Forces of Evil. This recipe is a delicious combination of bananas, magic, and ice cream. It's a perfect treat for a hot summer day or a magical adventure!"
+        ingredients={ingredients7}
+        directions={directions7}
         />
       <Accordion 
       header_Image={spongeboblogo}
