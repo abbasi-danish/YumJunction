@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import perfectSandwich from './images/perfect-sandwich.png';
+import perfectSandwich from './images/perfect-sandwich.jpg';
+import adventureTime from './images/adventure-time.jpg';
 import logo from './images/logo.png';
 
 export default function Accordion() {
@@ -15,6 +16,7 @@ export default function Accordion() {
             <div className="accordion">
                 <div onClick={() => setIsOpen(!isOpen)} className="accordion-header">
                     <h2>Adventure Time: Jake's Perfect Sandwich</h2>
+                    <img className="accordion-image" src={adventureTime} alt='adventure-time'/>
                 </div>
                 {isOpen && (
                     <div className="accordion-body">
