@@ -26,6 +26,12 @@ test('renders Courage the Cowardly Dog: Muriel\'s Flan', () => {
   expect(flanElement).toBeInTheDocument();
 });
 
+test('renders Spongebob Squarepants: Krabby Patty', () => {
+  render(<App />);
+  const pattyElement = screen.getByText(/Courage the Cowardly Dog: Muriel's Flan/i);
+  expect(flanElement).toBeInTheDocument();
+});
+
 test('accordion expands and collapses when clicked', () => {
   render(<App />);
   
