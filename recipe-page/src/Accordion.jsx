@@ -17,7 +17,7 @@ export default function Accordion({header_Image, accordion_Image, title, descrip
                     <div className="accordion-body">
                         <div className="accordion-body-content">
                             <div className="accordion-body-content-left">
-                                <img className="accordion.image" src={accordion_Image} alt="Food Image" />
+                                <img className="accordion.Image" src={accordion_Image} alt="Food Image" />
                             </div>
                             <div className="accordion-body-content-right">
                                 <h3>Description</h3>

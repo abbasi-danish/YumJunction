@@ -84,7 +84,7 @@ const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
                 <div className="logo-container">
                     <img className="logo" src={logo} alt="logo" />
                 </div>
-                <h1>YumJunction</h1>
+                <h1 style={{ fontFamily: 'Impact' }}>YumJunction</h1>
             </div>
         <Accordion 
           header_Image={adventureTime}
@@ -131,7 +131,7 @@ const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
 <Accordion 
       header_Image={froglogo}
       accordion_Image={frogfood}
-      title={"Princess and the Frog Beignets"}
+      title={"Princess and the Frog: Beignets"}
       description={"Indulge in the enchanting joy of Princess and the Frog Beignets—irresistibly fluffy, golden pillows of delight that bring a touch of Disney magic to your kitchen"}
       ingredients={ingredients5}
       directions={directions5}
@@ -140,7 +140,7 @@ const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
       <Accordion 
       header_Image={ratlogo}
       accordion_Image={ratFood}
-      title={"Remy's Ratatouille"}
+      title={"Ratatouille: Remy's Ratatouille"}
       description={"Take part in the favor packed, adventure with Remy's Ratatouille. Inspired by Disney's delightful rat chef, expertly layered vegetables dancing in perfect harmony, creating a symphony of taste that will transport you back to your childhood!"}
       ingredients={ingredients6}
       directions={directions6}
