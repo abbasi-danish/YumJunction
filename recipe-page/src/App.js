@@ -2,6 +2,8 @@ import React from 'react';
 import Accordion from './Accordion';
 import perfectSandwich from './images/perfect-sandwich.jpg';
 import adventureTime from './images/adventure-time.jpg';
+import logo from './images/logo.png';
+
 
 function App() {
   const ingredients = [" 1 boneless ribeye (the size of your bread)", " 2 sprigs thyme", " 2 sprigs rosemary", " Salt & freshly ground pepper", " 1 lobster soul", " 1 cup vegetable oil", " Juice of 1 lemon", " 3 egg yolks", " 1/2 pound bacon", " 1 Cornish game hen, deboned", " 3 thinly sliced rounds of Vidalia onion, plus more for tear-gathering", " 1 large, long sourdough loaf", " 3 Tbsp cream cheese", " 3 Tbsp fresh dill, picked", " 1 dill pickle, sliced thinly", " 1 egg, hard-boiled, peeled, and sliced", " 10 thin slices of cucumber", " 8 thin slices of Roma tomato", " 2 tsp tears", " 5 slices of bacon", " 1 bird from the counter"];
@@ -14,14 +16,28 @@ function App() {
 ];
   return (
     <div className="App">
-      <Accordion 
-        header_Image={adventureTime}
-        accordion_image={perfectSandwich}
-        title={"Adventure Time: Jake's Perfect Sandwich"}
-        description={"This is a recipe for Jake's perfect sandwich. It's a sandwich that Jake makes in the episode 'Time Sandwich'."}
-        ingredients={ingredients}
-        directions={directions}
-      />
+      <div className="header">
+                <div className="logo-container">
+                    <img className="logo" src={logo} alt="logo" />
+                </div>
+                <h1>YumJunction</h1>
+            </div>
+        <Accordion 
+          header_Image={adventureTime}
+          accordion_image={perfectSandwich}
+          title={"Adventure Time: Jake's Perfect Sandwich"}
+          description={"This is a recipe for Jake's perfect sandwich. It's a sandwich that Jake makes in the episode 'Time Sandwich'."}
+          ingredients={ingredients}
+          directions={directions}
+        />
+        <Accordion
+          header_Image={perfectSandwich}
+          accordion_image={adventureTime}
+          title={"Adventure Time: Jake's Perfect Sandwich"}
+          description={"This is a recipe for Jake's perfect sandwich. It's a sandwich that Jake makes in the episode 'Time Sandwich'."}
+          ingredients={ingredients}
+          directions={directions}
+          />
     </div>
   )
 }
