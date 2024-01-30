@@ -6,6 +6,8 @@ import baconPancakes from './images/bacon-pancakes.jpg';
 import couragelogo from './images/courage-logo.png';
 import flan from './images/courage-flan.png';
 import logo from './images/logo.png';
+import banana from './images/FoodofStar.png';
+import ForceofEvil from './images/ForceofEvil.jpg';
 
 
 function App() {
@@ -32,6 +34,13 @@ const directions3 = [
   "Bake until flan is set but still jiggles slightly in center, about 1 hour. Remove cake pan from water bath and let cool completely on a wire rack. Cover and refrigerate until cold, at least 4 hours or overnight.",
   "To unmold, run a knife around edge of flan. Place a large plate over cake pan and invert. Remove cake pan and serve flan cold.",
   "Enjoy!"
+];
+
+const ingredients4 =["4 ripe bananas, Yellow food coloring"];
+const directions4 = [
+  "Peel and thinly slice the bananas. Freeze the banana slices for at least two hours. Place the frozen banana slices in a food processor.",
+  "Blend, occasionally scraping down the sides of the bowl, until the bananas are smooth and creamy. Add a few drops of yellow food coloring and blend until the color is evenly distributed.",
+  "Serve immediately or freeze for later. Enjoy!"
 ];
 
   return (
@@ -66,6 +75,16 @@ const directions3 = [
         ingredients={ingredients3}
         directions={directions3}
         />
+        <Accordion
+        header_Image={ForceofEvil}
+        accordion_Image={banana}
+        title={"Star vs. Forces of Evil: Banagic IceCream"}
+        description="The Banagic Ice Cream is a magical treat from the show Star vs. Forces of Evil. This recipe is a delicious combination of bananas, magic, and ice cream. It's a perfect treat for a hot summer day or a magical adventure!"
+        ingredients={ingredients4}
+        directions={directions4}
+        />
+
+
     </div>
   )
 }
