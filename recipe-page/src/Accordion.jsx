@@ -29,6 +29,8 @@ export default function Accordion() {
                                 <img className="perfect-sandwich" src={perfectSandwich} alt="perfect-sandwich" />
                             </div>
                             <div className="accordion-body-content-right">
+                                <h4>Description</h4>
+                                    <p>It's Adventure Time! This is a sandwich that Jake from Adventure Time would be proud of. It's loaded with bacon, lettuce, tomato, and a few other tasty ingredients.</p>
                                 <h3>Ingredients</h3>
                                 <ul>
                                     <li>1/2 cup of milk</li>
