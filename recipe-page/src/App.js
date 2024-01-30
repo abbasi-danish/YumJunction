@@ -145,7 +145,6 @@ const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
       ingredients={ingredients6}
       directions={directions6}
       />
-
     </div>
   )
 }
