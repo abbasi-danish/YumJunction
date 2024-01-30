@@ -8,10 +8,10 @@ import spongeboblogo from './images/spongebob-logo.png';
 import krabbypatty from './images/krabbypatty.jpg';
 import flan from './images/courage-flan.png';
 import logo from './images/logo.png';
-import ratlogo from '.images/ratlogo.png';
-import ratFood from '.images/ratFood.jpg';
-import frogfood from '.images/frogfood.jpg';
-import froglogo from '.images/froglogo/png';
+import ratlogo from './images/ratlogo.png';
+import ratFood from './images/ratFood.jpg';
+import frogfood from './images/frogfood.jpg';
+import froglogo from './images/froglogo.png';
 
 
 
@@ -48,23 +48,23 @@ const directions4 = ["In a large bowl, add ground beef  and seasonings and shape
 "Enjoy!"]
 
 const ingredients5 = ["3/4 cup lukewarm water, 3 1/2 teaspoons active dry yeast, 2 large eggs, 1/2 cup whole milk, 3 tablespoons unsalted butter, melted, 1/4 cup granulated sugar, plus 2 tablespoons, 4 ups bread flour, plus more for dusting, 1/2 teaspoon kosher salt, 8 cups canola oil, for frying, powdered sugar (for topping)"];
-const directions5 = ["1: Pour the water into a medium bowl or large liquid measuring cup and sprinkle the yeast over the top. Let stand for about 5 minutes, until foamy.",
-"2: Add the eggs, milk, melted butter, and sugar, and whisk to combine.",
-"3: In a large bowl, whisk together the flour and salt.",
-"4: Pour the wet ingredients into the dry ingredients, stirring with a flexible spatula to form a shaggy dough. Turn the dough out onto a clean surface and use your hands to knead until it comes together in a smooth ball, about 2 minutes.",
-"5: Grease a clean large bowl with canola oil. Transfer the dough to the greased bowl and cover tightly with plastic wrap. Let the dough rise in a warm place until doubled in size, about 1 hour.",
-"6: Punch the dough down with your fist, then turn it out onto a lightly floured surface.",
-"7: Roll the dough into a large rectangle, about ¼ inch (6 mm) thick. With a sharp knife, cut the dough into 2-inch (5 cm) squares, then transfer the squares to a baking sheet lined with parchment paper.",
-"8: Heat the canola oil in a large pot over medium-high heat until it reaches 350˚F (180˚C).",
-"9: Lower the dough squares, 3-4 at a time, into the hot oil. As soon as the beignets puff up, use tongs or a kitchen spider to gently flip them over. Fry until golden brown on both sides, flipping as needed, 2-3 minutes more. Transfer the beignets to a wire rack to drain.",
-"10: Dust the beignets with powdered sugar and serve warm. And enjoy!"];
+const directions5 = ["Pour the water into a medium bowl or large liquid measuring cup and sprinkle the yeast over the top. Let stand for about 5 minutes, until foamy.",
+"Add the eggs, milk, melted butter, and sugar, and whisk to combine.",
+"In a large bowl, whisk together the flour and salt.",
+"Pour the wet ingredients into the dry ingredients, stirring with a flexible spatula to form a shaggy dough. Turn the dough out onto a clean surface and use your hands to knead until it comes together in a smooth ball, about 2 minutes.",
+"Grease a clean large bowl with canola oil. Transfer the dough to the greased bowl and cover tightly with plastic wrap. Let the dough rise in a warm place until doubled in size, about 1 hour.",
+"Punch the dough down with your fist, then turn it out onto a lightly floured surface.",
+"Roll the dough into a large rectangle, about ¼ inch (6 mm) thick. With a sharp knife, cut the dough into 2-inch (5 cm) squares, then transfer the squares to a baking sheet lined with parchment paper.",
+"Heat the canola oil in a large pot over medium-high heat until it reaches 350˚F (180˚C).",
+"Lower the dough squares, 3-4 at a time, into the hot oil. As soon as the beignets puff up, use tongs or a kitchen spider to gently flip them over. Fry until golden brown on both sides, flipping as needed, 2-3 minutes more. Transfer the beignets to a wire rack to drain.",
+"Dust the beignets with powdered sugar and serve warm. And enjoy!"];
     
 const ingredients6 = ["1 (6 ounce) can tomato paste, 1/2 onion, chopped, 1/4 cup minced garlic, 3/4 cup water, 4 tablespoons olive oil, divided, salt and ground black pepper to taste, 1 small eggplant, trimmed and very thinly sliced, 1 zucchini, trimmed and very thinly sliced, 1 yellow squash, trimmed and very thinly sliced, 1 red bell pepper, cored and very thinly sliced, 1 yellow bell pepper, cored and very thinly sliced, 1 teaspoon fresh thyme leaves, 3 tablespoons mascarpone cheese"];
-const directions6 = ["Step 1: Preheat the oven to 375 degrees F (190 degrees C).",
-"Step 2: Spread tomato paste onto the bottom of a 10-inch square baking dish. Sprinkle with onion and garlic. Stir in water and 1 tablespoon olive oil until thoroughly combined. Season with salt and pepper.",
-"Step 3: Arrange alternating slices of eggplant, zucchini, yellow squash, red bell pepper, and yellow bell pepper, starting at the outer edge of the dish and working concentrically towards the center. Overlap slices a little to display colors.",
-"Step 4: Drizzle vegetables with remaining 3 tablespoons olive oil; season with salt and pepper. Sprinkle with thyme leaves. Cover vegetables with a piece of parchment paper cut to fit inside.",
-"Step 5: Bake in the preheated oven until vegetables are roasted and tender, about 45 minutes. Serve with dollops of mascarpone cheese."
+const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
+"Spread tomato paste onto the bottom of a 10-inch square baking dish. Sprinkle with onion and garlic. Stir in water and 1 tablespoon olive oil until thoroughly combined. Season with salt and pepper.",
+"Arrange alternating slices of eggplant, zucchini, yellow squash, red bell pepper, and yellow bell pepper, starting at the outer edge of the dish and working concentrically towards the center. Overlap slices a little to display colors.",
+"Drizzle vegetables with remaining 3 tablespoons olive oil; season with salt and pepper. Sprinkle with thyme leaves. Cover vegetables with a piece of parchment paper cut to fit inside.",
+"Bake in the preheated oven until vegetables are roasted and tender, about 45 minutes. Serve with dollops of mascarpone cheese."
 ];
 
 
