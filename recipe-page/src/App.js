@@ -3,6 +3,8 @@ import Accordion from './Accordion';
 import perfectSandwich from './images/perfect-sandwich.jpg';
 import adventureTime from './images/adventure-time.jpg';
 import baconPancakes from './images/bacon-pancakes.jpg';
+import couragelogo from './images/courage-logo.png';
+import flan from './images/courage-flan.png';
 import logo from './images/logo.png';
 
 
@@ -22,6 +24,16 @@ function App() {
     "Before flipping, add some strips of bacon and then flip.",
     "Make 2-3 pancakes before topping with butter and maple syrup."
 ];
+const ingredients3 = ["1 cup granulated sugar", "1/4 cup water", "4 large eggs", "2 cups whole milk", "1 teaspoon vanilla extract"];
+const directions3 = [
+  "Preheat oven to 350°F. Place a 9-inch round cake pan in a large roasting pan.",
+  "In a small saucepan, combine sugar and water. Cook over medium heat, stirring occasionally, until sugar is dissolved and mixture is a light caramel color, about 10 minutes. Immediately pour into cake pan, swirling to coat bottom of pan.",
+  "In a large bowl, whisk together eggs, milk, and vanilla. Pour into cake pan over caramel. Place roasting pan in oven and pour in enough boiling water to come halfway up sides of cake pan.",
+  "Bake until flan is set but still jiggles slightly in center, about 1 hour. Remove cake pan from water bath and let cool completely on a wire rack. Cover and refrigerate until cold, at least 4 hours or overnight.",
+  "To unmold, run a knife around edge of flan. Place a large plate over cake pan and invert. Remove cake pan and serve flan cold.",
+  "Enjoy!"
+];
+
   return (
     <div className="App">
       <div className="header">
@@ -46,6 +58,14 @@ function App() {
           ingredients={ingredients2}
           directions={directions2}
           />
+        <Accordion
+        header_Image={couragelogo}
+        accordion_Image={flan}
+        title={"Courage the Cowardly Dog: Muriel's Flan"}
+        description="In the classic episode 'The Great Fusilli,' Courage the Cowardly Dog must save Muriel from the clutches of the evil Fusilli, who plans to turn her into a flan! In this recipe, we'll be making a flan of our own, with a rich caramel sauce and a creamy custard filling."
+        ingredients={ingredients3}
+        directions={directions3}
+        />
     </div>
   )
 }
