@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import perfectSandwich from './images/perfect-sandwich.jpg';
 import adventureTime from './images/adventure-time.jpg';
 import logo from './images/logo.png';
+import './Accordion.css';
 
 export default function Accordion() {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,9 @@ export default function Accordion() {
                 <div onClick={() => setIsOpen(!isOpen)} className="accordion-header">
                     <h2>Adventure Time: Jake's Perfect Sandwich</h2>
                     <img className="accordion-image" src={adventureTime} alt='adventure-time'/>
+                    <div className = "accordion-indicator">
+                        {isOpen ? '-' : '+'}
+                    </div>
                 </div>
                 {isOpen && (
                     <div className="accordion-body">
