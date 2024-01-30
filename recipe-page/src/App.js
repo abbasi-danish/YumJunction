@@ -80,11 +80,15 @@ const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
 
   return (
     <div className="App">
-      <div className="header">
+      <div className="header" style={{ borderBottom: "3px solid black", width: "100%"}}>
                 <div className="logo-container">
                     <img className="logo" src={logo} alt="logo" />
                 </div>
                 <h1>YumJunction</h1>
+            </div>
+            <div className = "website-description">
+                <h2 style={{ textAlign: "left" }}>Welcome!</h2>
+                <p style={{ textAlign: "left" }}>YumJunction is a website that provides recipes for food from your favorite TV shows and movies. We hope you enjoy!</p>
             </div>
         <Accordion 
           header_Image={adventureTime}
