@@ -4,6 +4,8 @@ import perfectSandwich from './images/perfect-sandwich.jpg';
 import adventureTime from './images/adventure-time.jpg';
 import baconPancakes from './images/bacon-pancakes.jpg';
 import couragelogo from './images/courage-logo.png';
+import spongeboblogo from './images/spongebob-logo.png';
+import krabbypatty from './images/krabbypatty.jpg';
 import flan from './images/courage-flan.png';
 import logo from './images/logo.png';
 
@@ -33,6 +35,12 @@ const directions3 = [
   "To unmold, run a knife around edge of flan. Place a large plate over cake pan and invert. Remove cake pan and serve flan cold.",
   "Enjoy!"
 ];
+
+const ingredients4 = ["2 cups ground beef", "1/4 cup breadcrumbs", "1/4 cup chopped onions", "1/4 cup chopped pickles", "1/4 cup ketchup", "1/4 cup mustard", "1/4 teaspoon salt", "1/4 teaspoon pepper", "4 hamburger buns"]
+const directions4 = ["In a large bowl, add ground beef  and seasonings and shape into four patties", 
+"Grill, covered, over medium heat or broil 4 in.", "Heat for 5-7 minutes on each side or until a thermometer reads 160° and juices run clear.", 
+"Serve on buns.",
+"Enjoy!"]
 
   return (
     <div className="App">
@@ -66,6 +74,17 @@ const directions3 = [
         ingredients={ingredients3}
         directions={directions3}
         />
+      <Accordion 
+      header_Image={spongeboblogo}
+      accordion_Image={krabbypatty}
+      title={"Spongebob Squarepants: Krabby Patty"}
+      description={"In the underwater city of Bikini Bottom, Spongebob Squarepants works as a fry cook at the Krusty Krab, where he crafts the world-famous Krabby Patty. With a secret recipe known only to Mr. Krabs, the Krabby Patty is a mouthwatering blend of lettuce, cheese, tomatoes, tartar sauce, mayo, flour, tumeric, sea salt, land salt, barnacle shavings, the patty, mustard, ketchup, the secret formula, two buns, onions, and pickles. In this recipe, we'll be making our own Krabby Patty, with a few substitutions for the secret formula."}
+      ingredients={ingredients4}
+      directions={directions4}
+      
+      />
+
+
     </div>
   )
 }
