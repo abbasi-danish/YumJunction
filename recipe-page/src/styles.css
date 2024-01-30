@@ -1,11 +1,16 @@
 .App {
-  text-align: center;
-}
-
+    text-align: center;
+  }
+  
+  body{
+    background-color: aquamarine;
+  }
+  
 .accordion-header{
-  cursor: pointer;
-  padding:10px;
-  position: relative;
+    cursor: pointer;
+    padding:10px;
+    position: relative;
+    border: 5px solid black;
 }
 
 .accordion-header:hover{
@@ -49,4 +54,3 @@
 .instructions{
   font-size:20px
 }
-
