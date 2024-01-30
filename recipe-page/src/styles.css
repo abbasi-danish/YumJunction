@@ -3,7 +3,7 @@
   }
   
   body{
-    background-color: aquamarine;
+    background-color: rgb(147, 182, 138);
   }
   
 .accordion-header{
@@ -36,6 +36,8 @@
   font-size:20px;
   padding-left:10px;
   padding-right:10px;
+  background-color: #ac9181;
+  border: 3px solid black;
 }
 .header{
   display:flex;
