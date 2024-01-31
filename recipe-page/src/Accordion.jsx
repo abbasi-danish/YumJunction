@@ -8,7 +8,7 @@ export default function Accordion({header_Image, accordion_Image, title, descrip
             <div className="accordion">
                 <div onClick={() => setIsOpen(!isOpen)} className="accordion-header">
                     <h2>{title}</h2>
-                    <img className="header-image" src={header_Image} alt=''/>
+                    <img className="header-image" src={header_Image} alt='Logo of cartoon'/>
                     <div className = "accordion-indicator">
                         {isOpen ? '-' : '+'}
                     </div>
@@ -18,7 +18,7 @@ export default function Accordion({header_Image, accordion_Image, title, descrip
                         <div className="accordion-body-content">
                             <div className="accordion-body-content-left">
 
-                                <img className="accordion_Image" src={accordion_Image} alt="" />
+                                <img className="accordion_Image" src={accordion_Image} alt="Delicious dish" />
                             </div>
                             <div className="accordion-body-content-right">
                                 <h3>Description</h3>
