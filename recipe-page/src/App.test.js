@@ -4,8 +4,8 @@ import App from './App';
 
 test('renders YumJunction header', () => {
   render(<App />);
-  const headerElement = screen.getByText(/YumJunction/i);
-  expect(headerElement).toBeInTheDocument();
+  const headerElement = screen.getAllByText(/YumJunction/i);
+  expect(headerElement.length).toBe(1);
 });
 
 test('renders Adventure Time: Jake\'s Perfect Sandwich', () => {
