@@ -1,54 +1,54 @@
 import { fireEvent } from '@testing-library/react';
 import { render, screen } from '@testing-library/react';
-import App from '../LandingPage';
+import LandingPage from './LandingPage';
 
 test('renders YumJunction header', () => {
-  render(<App />);
+  render(<LandingPage />);
   const headerElement = screen.getAllByText(/YumJunction/i);
   expect(headerElement.length).toBe(2);
 });
 
 test('renders Adventure Time: Jake\'s Perfect Sandwich', () => {
-  render(<App />);
+  render(<LandingPage/>);
   const sandwichElement = screen.getByText(/Adventure Time: Jake's Perfect Sandwich/i);
   expect(sandwichElement).toBeInTheDocument();
 });
 
 test('renders Adventure Time: Jake\'s Bacon Pancakes', () => {
-  render(<App />);
+  render(<LandingPage />);
   const pancakesElement = screen.getByText(/Adventure Time: Jake's Bacon Pancakes/i);
   expect(pancakesElement).toBeInTheDocument();
 });
 
 test('renders Courage the Cowardly Dog: Muriel\'s Flan', () => {
-  render(<App />);
+  render(<LandingPage />);
   const flanElement = screen.getByText(/Courage the Cowardly Dog: Muriel's Flan/i);
   expect(flanElement).toBeInTheDocument();
 });
 
 test('renders Spongebob Squarepants: Krabby Patty', () => {
-  render(<App />);
+  render(<LandingPage />);
   const pattyElement = screen.getByText(/Spongebob Squarepants: Krabby Patty/i);
   expect(pattyElement).toBeInTheDocument();
 });
 test('renders Star vs. Forces of Evil: Banagic IceCream', () => {
-  render(<App />);
+  render(<LandingPage />);
   const icecreamElement = screen.getByText(/Star vs. Forces of Evil: Banagic IceCream/i);
   expect(icecreamElement).toBeInTheDocument();
 });
 test('renders Princess and the Frog: Beignets', () => {
-  render(<App />);
+  render(<LandingPage />);
   const beignetElement = screen.getByText(/Princess and the Frog: Beignets/i);
   expect(beignetElement).toBeInTheDocument();
 });
 test('renders Ratatouille: Remy\'s Ratatouille', () => {
-  render(<App />);
+  render(<LandingPage />);
   const ratElement = screen.getByText(/Ratatouille: Remy's Ratatouille/i);
   expect(ratElement).toBeInTheDocument();
 });
 
 test('accordion expands and collapses when clicked', () => {
-  render(<App />);
+  render(<LandingPage />);
   
   // Find the accordion header elements
   const perfectSandwichAccordionHeader = screen.getByText(/Adventure Time: Jake's Perfect Sandwich/i);
