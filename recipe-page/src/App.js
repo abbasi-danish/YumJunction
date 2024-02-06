@@ -8,6 +8,8 @@ import Recipe2 from './pages/Recipe2/Recipe2';
 
 import Recipe1 from './pages/Recipe1/Recipe1';
 
+import TeamLanding from './pages/TeamLanding/TeamLanding';
+
 function App() {
     return (
         <Router>
@@ -17,6 +19,8 @@ function App() {
                 <Route path='/recipe2' element={<Recipe2 />} />
 
                 <Route path="/recipe1" element={<Recipe1 />} />
+
+                <Route path="/teamlanding" element={<TeamLanding />} />
 
             </Routes>
         </Router>
