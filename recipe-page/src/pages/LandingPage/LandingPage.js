@@ -13,6 +13,7 @@ import frogfood from '../../images/frogfood.jpg';
 import froglogo from '../../images/froglogo.png';
 import banana from '../../images/FoodofStar.png';
 import ForceofEvil from '../../images/ForceofEvil.jpg';
+import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 
@@ -32,15 +33,7 @@ function LandingPage() {
     "Before flipping, add some strips of bacon and then flip.",
     "Make 2-3 pancakes before topping with butter and maple syrup."
 ];
-const ingredients3 = ["1 cup granulated sugar", "1/4 cup water", "4 large eggs", "2 cups whole milk", "1 teaspoon vanilla extract"];
-const directions3 = [
-  "Preheat oven to 350°F. Place a 9-inch round cake pan in a large roasting pan.",
-  "In a small saucepan, combine sugar and water. Cook over medium heat, stirring occasionally, until sugar is dissolved and mixture is a light caramel color, about 10 minutes. Immediately pour into cake pan, swirling to coat bottom of pan.",
-  "In a large bowl, whisk together eggs, milk, and vanilla. Pour into cake pan over caramel. Place roasting pan in oven and pour in enough boiling water to come halfway up sides of cake pan.",
-  "Bake until flan is set but still jiggles slightly in center, about 1 hour. Remove cake pan from water bath and let cool completely on a wire rack. Cover and refrigerate until cold, at least 4 hours or overnight.",
-  "To unmold, run a knife around edge of flan. Place a large plate over cake pan and invert. Remove cake pan and serve flan cold.",
-  "Enjoy!"
-];
+
 const ingredients4 = ["2 cups ground beef", "1/4 cup breadcrumbs", "1/4 cup chopped onions", "1/4 cup chopped pickles", "1/4 cup ketchup", "1/4 cup mustard", "1/4 teaspoon salt", "1/4 teaspoon pepper", "4 hamburger buns"]
 const directions4 = ["In a large bowl, add ground beef  and seasonings and shape into four patties", 
 "Grill, covered, over medium heat or broil 4 in.", "Heat for 5-7 minutes on each side or until a thermometer reads 160° and juices run clear.", 
@@ -93,41 +86,30 @@ const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
           accordion_Image={perfectSandwich}
           title={"Adventure Time: Jake's Perfect Sandwich"}
           description={"In the whimsical world of Adventure Time, Jake the Dog crafts a sandwich beyond imagination in 'Time Sandwich.' With layers of savory bacon, crisp lettuce, zesty mustard, and a sprinkle of magic, each bite becomes a journey through flavor and fantasy, capturing the essence of Ooo in every delicious bite."}
-          ingredients={ingredients}
-          directions={directions}
         />
         <Accordion
           header_Image={adventureTime}
           accordion_Image={baconPancakes}
           title={"Adventure Time: Jake's Bacon Pancakes"}
           description={"Discover the whimsical delight of Jake's Bacon Pancakes from Adventure Time! This enchanting dish combines fluffy pancakes with crispy bacon, creating a magical blend of sweet and savory flavors. Whisk together a batter of flour, sugar, and spices, then cook to golden perfection in a cast iron skillet. Top with butter and maple syrup for a truly adventurous breakfast experience that's sure to delight fans of all ages!"}
-          ingredients={ingredients2}
-          directions={directions2}
           />
         <Accordion
         header_Image={couragelogo}
-        accordion_Image={flan}
-        title={"Courage the Cowardly Dog: Muriel's Flan"}
+        title= { <Link to="/recipe2">Courage the Cowardly Dog</Link>} 
         description="In the classic episode 'The Great Fusilli,' Courage the Cowardly Dog must save Muriel from the clutches of the evil Fusilli, who plans to turn her into a flan! In this recipe, we'll be making a flan of our own, with a rich caramel sauce and a creamy custard filling."
-        ingredients={ingredients3}
-        directions={directions3}
+    
         />
         <Accordion
         header_Image={ForceofEvil}
         accordion_Image={banana}
         title={"Star vs. Forces of Evil: Banagic IceCream"}
         description="The Banagic Ice Cream is a magical treat from the show Star vs. Forces of Evil. This recipe is a delicious combination of bananas, magic, and ice cream. It's a perfect treat for a hot summer day or a magical adventure!"
-        ingredients={ingredients7}
-        directions={directions7}
         />
       <Accordion 
       header_Image={spongeboblogo}
       accordion_Image={krabbypatty}
       title={"Spongebob Squarepants: Krabby Patty"}
       description={"In the underwater city of Bikini Bottom, Spongebob Squarepants works as a fry cook at the Krusty Krab, where he crafts the world-famous Krabby Patty. With a secret recipe known only to Mr. Krabs, the Krabby Patty is a mouthwatering blend of lettuce, cheese, tomatoes, tartar sauce, mayo, flour, tumeric, sea salt, land salt, barnacle shavings, the patty, mustard, ketchup, the secret formula, two buns, onions, and pickles. In this recipe, we'll be making our own Krabby Patty, with a few substitutions for the secret formula."}
-      ingredients={ingredients4}
-      directions={directions4}
-      
       />
 
 <Accordion 
@@ -135,8 +117,6 @@ const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
       accordion_Image={frogfood}
       title={"Princess and the Frog: Beignets"}
       description={"Indulge in the enchanting joy of Princess and the Frog Beignets—irresistibly fluffy, golden pillows of delight that bring a touch of Disney magic to your kitchen"}
-      ingredients={ingredients5}
-      directions={directions5}
       />
 
       <Accordion 
@@ -144,8 +124,6 @@ const directions6 = ["Preheat the oven to 375 degrees F (190 degrees C).",
       accordion_Image={ratFood}
       title={"Ratatouille: Remy's Ratatouille"}
       description={"Take part in the favor packed, adventure with Remy's Ratatouille. Inspired by Disney's delightful rat chef, expertly layered vegetables dancing in perfect harmony, creating a symphony of taste that will transport you back to your childhood!"}
-      ingredients={ingredients6}
-      directions={directions6}
       />
     </div>
   )
