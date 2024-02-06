@@ -84,7 +84,7 @@ function LandingPage() {
         <Accordion
           header_Image={adventureTime}
           accordion_Image={baconPancakes}
-          title={"Adventure Time: Jake's Bacon Pancakes"}
+          title={ <Link to="/recipe5">Adventure Time</Link>} 
           description={"Discover the whimsical delight of Jake's Bacon Pancakes from Adventure Time! This enchanting dish combines fluffy pancakes with crispy bacon, creating a magical blend of sweet and savory flavors. Whisk together a batter of flour, sugar, and spices, then cook to golden perfection in a cast iron skillet. Top with butter and maple syrup for a truly adventurous breakfast experience that's sure to delight fans of all ages!"}
           />
         <Accordion
@@ -96,27 +96,29 @@ function LandingPage() {
         <Accordion
         header_Image={ForceofEvil}
         accordion_Image={banana}
-        title={"Star vs. Forces of Evil: Banagic IceCream"}
+        title={ <Link to="/recipe3">Star vs. Forces of Evil</Link>} 
         description="The Banagic Ice Cream is a magical treat from the show Star vs. Forces of Evil. This recipe is a delicious combination of bananas, magic, and ice cream. It's a perfect treat for a hot summer day or a magical adventure!"
         />
       <Accordion 
       header_Image={spongeboblogo}
       accordion_Image={krabbypatty}
-      title={"Spongebob Squarepants: Krabby Patty"}
+      title={ <Link to="/recipe6">Spongebob Squarepants</Link>} 
+
       description={"In the underwater city of Bikini Bottom, Spongebob Squarepants works as a fry cook at the Krusty Krab, where he crafts the world-famous Krabby Patty. With a secret recipe known only to Mr. Krabs, the Krabby Patty is a mouthwatering blend of lettuce, cheese, tomatoes, tartar sauce, mayo, flour, tumeric, sea salt, land salt, barnacle shavings, the patty, mustard, ketchup, the secret formula, two buns, onions, and pickles. In this recipe, we'll be making our own Krabby Patty, with a few substitutions for the secret formula."}
       />
 
 <Accordion 
       header_Image={froglogo}
       accordion_Image={frogfood}
-      title={"Princess and the Frog: Beignets"}
+      title={ <Link to="/recipe4">Princess and the Frog: Beignets</Link>} 
       description={"Indulge in the enchanting joy of Princess and the Frog Beignets—irresistibly fluffy, golden pillows of delight that bring a touch of Disney magic to your kitchen"}
       />
 
       <Accordion 
       header_Image={ratlogo}
       accordion_Image={ratFood}
-      title={"Ratatouille: Remy's Ratatouille"}
+      title={ <Link to="/recipe7">Ratatouille: Remy's Ratatouille</Link>} 
+
       description={"Take part in the favor packed, adventure with Remy's Ratatouille. Inspired by Disney's delightful rat chef, expertly layered vegetables dancing in perfect harmony, creating a symphony of taste that will transport you back to your childhood!"}
       />
     </div>
