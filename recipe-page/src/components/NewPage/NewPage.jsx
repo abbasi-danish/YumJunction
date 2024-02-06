@@ -1,9 +1,9 @@
 import React from "react"
-export default function newPage({ pageTitle, ingredients, directions, pageImage }) {
+export default function newPage({ title, ingredients, directions, pageImage }) {
     return (
         <div className="page">
             <div className="header" style={{ borderBottom: "3px solid black", width: "100%" }}>
-                <h1>{pageTitle}</h1>
+                <h1>{title}</h1>
             </div>
             <div style={{ float: "right" }}>
                 <img src={pageImage} alt="Image of dish" style={{ width: 700, height: "auto", border: "3px solid black" }} />
