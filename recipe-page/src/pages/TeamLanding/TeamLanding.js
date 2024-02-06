@@ -5,7 +5,7 @@ import testphoto from '../../images/testphoto.jpeg';
 function teamlanding(){
     return(
         <div>
-            <img src={testphoto} alt="Test Photo" />
+            <img src={testphoto} alt="tomnjerry" />
         </div>
     )
 }
