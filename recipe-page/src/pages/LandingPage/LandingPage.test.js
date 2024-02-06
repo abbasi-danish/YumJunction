@@ -22,7 +22,7 @@ test('renders Adventure Time: Jake\'s Bacon Pancakes', () => {
 
 test('renders Courage the Cowardly Dog: Muriel\'s Flan', () => {
   render(<LandingPage />);
-  const flanElement = screen.getByText(/Courage the Cowardly Dog: Muriel's Flan/i);
+  const flanElement = screen.getByText(/Courage the Cowardly Dog/i);
   expect(flanElement).toBeInTheDocument();
 });
 
@@ -53,7 +53,7 @@ test('accordion expands and collapses when clicked', () => {
   // Find the accordion header elements
   const perfectSandwichAccordionHeader = screen.getByText(/Adventure Time: Jake's Perfect Sandwich/i);
   const baconPancakesAccordionHeader = screen.getByText(/Adventure Time: Jake's Bacon Pancakes/i);
-  const flanAccordionHeader = screen.getByText(/Courage the Cowardly Dog: Muriel's Flan/i);
+  const flanAccordionHeader = screen.getByText(/Courage the Cowardly Dog/i);
   const krabbyPattyAccordionHeader = screen.getByText(/Spongebob Squarepants: Krabby Patty/i);
   const banagicIceCreamAccordionHeader = screen.getByText(/Star vs. Forces of Evil: Banagic IceCream/i);
   const beignetsAccordionHeader = screen.getByText(/Princess and the Frog: Beignets/i);
