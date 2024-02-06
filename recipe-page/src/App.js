@@ -14,7 +14,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<LandingPage />} />
 
-
                 <Route path='/recipe2' element={<Recipe2 />} />
 
                 <Route path="/recipe1" element={<Recipe1 />} />
