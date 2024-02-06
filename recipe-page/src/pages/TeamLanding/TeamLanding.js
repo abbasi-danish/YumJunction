@@ -2,6 +2,7 @@ import React from 'react';
 import Member from '../../components/Member/Member';
 import yunus from '../../images/yunus.jpg';
 import pakistan from '../../images/Pakistan.png';
+
 import './TeamLanding.css'; // Import the CSS file for styling
 function TeamLanding() {
     return (
@@ -20,6 +21,18 @@ function TeamLanding() {
                     description="Patrick Star is SpongeBob's best friend. He is known for his love of ice cream and his lack of intelligence."
                     memberImage={pakistan}
                 />
+                <Member
+                    name ="Joseph Sosa"
+                    description="Squidward Tentacles is SpongeBob's neighbor. He is known for his love of music and his dislike of SpongeBob."
+                    memberImage={pakistan}
+                />
+                <Member
+                    name ="Fitz Gerald"
+                    description="Mr. Krabs is the owner of the Krusty Krab. He is known for his love of money and his greed."   
+                    memberImage={pakistan}
+                />
+
+
             </div>
         </div>
     );
