@@ -10,7 +10,7 @@ function Recipe3() {
     return (
        <div className = "recipe">
             <NewPage
-            title = "Star vs. Forces of Evil: Banagic IceCream"
+            title = "Banagic IceCream"
             pageImage = {banana}
             ingredients = {ingredients}
             directions = {directions}

@@ -11,7 +11,7 @@ const directions = ["Preheat the oven to 375 degrees F (190 degrees C).",
     return (
        <div className = "recipe">
             <NewPage
-            title = "Princess and the Frog: Beignets"
+            title = "Beignets"
             pageImage = {frogfood}
             ingredients = {ingredients}
             directions = {directions}
