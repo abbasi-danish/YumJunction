@@ -1,0 +1,20 @@
+.teamlanding {
+    text-align: center;
+    background: orange;
+}
+  
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.logo{
+  width:100px;
+  height:100px;
+  margin-left:20px;
+}
+
