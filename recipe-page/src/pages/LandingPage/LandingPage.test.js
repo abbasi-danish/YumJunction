@@ -26,10 +26,10 @@ test('accordion expands and collapses when clicked', () => {
   
   // Tests a few accordion header elements
   const flanAccordionHeader = screen.getByText(/Courage the Cowardly Dog/i);
-  const krabbyPattyAccordionHeader = screen.getByText(/Spongebob Squarepants: Krabby Patty/i);
-  const banagicIceCreamAccordionHeader = screen.getByText(/Star vs. Forces of Evil: Banagic IceCream/i);
-  const beignetsAccordionHeader = screen.getByText(/Princess and the Frog: Beignets/i);
-  const ratatouilleAccordionHeader = screen.getByText(/Ratatouille: Remy's Ratatouille/i);
+  const krabbyPattyAccordionHeader = screen.getByText(/Spongebob Squarepants/i);
+  const banagicIceCreamAccordionHeader = screen.getByText(/Star vs. Forces of Evil/i);
+  const beignetsAccordionHeader = screen.getByText(/Princess and the Frog/i);
+  const ratatouilleAccordionHeader = screen.getByText(/Ratatouille/i);
   
   // Check if the accordion content is initially hidden
   expect(screen.queryByText(/In the classic episode 'The Great Fusilli,'/i)).not.toBeInTheDocument();

@@ -110,14 +110,14 @@ function LandingPage() {
 <Accordion 
       header_Image={froglogo}
       accordion_Image={frogfood}
-      title={ <Link to="/recipe4">Princess and the Frog: Beignets</Link>} 
+      title={ <Link to="/recipe4">Princess and the Frog</Link>} 
       description={"Indulge in the enchanting joy of Princess and the Frog Beignets—irresistibly fluffy, golden pillows of delight that bring a touch of Disney magic to your kitchen"}
       />
 
       <Accordion 
       header_Image={ratlogo}
       accordion_Image={ratFood}
-      title={ <Link to="/recipe7">Ratatouille: Remy's Ratatouille</Link>} 
+      title={ <Link to="/recipe7">Ratatouille</Link>} 
 
       description={"Take part in the favor packed, adventure with Remy's Ratatouille. Inspired by Disney's delightful rat chef, expertly layered vegetables dancing in perfect harmony, creating a symphony of taste that will transport you back to your childhood!"}
       />
