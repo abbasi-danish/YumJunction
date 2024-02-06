@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Accordion.css';
 
-export default function Accordion({ header_Image, accordion_Image, title, description, ingredients, directions }) {
+export default function Accordion({ header_Image, title, description}) {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="App">
@@ -17,23 +17,10 @@ export default function Accordion({ header_Image, accordion_Image, title, descri
                     <div className="accordion-body">
                         <div className="accordion-body-content">
                             <div className="accordion-body-content-left">
-                                <img className="accordion_Image" src={accordion_Image} alt="Delicious dish" />
                             </div>
                             <div className="accordion-body-content-right">
                                 <h3>Description</h3>
                                 <p>{description}</p>
-                                <h3>Ingredients</h3>
-                                <ul>
-                                    {ingredients.map((ingredient, index) => (
-                                        <li key={index}>{ingredient}</li>
-                                    ))}
-                                </ul>
-                                <h3>Directions</h3>
-                                <ol>
-                                    {directions.map((direction, index) => (
-                                        <li key={index}>{direction}</li>
-                                    ))}
-                                </ol>
                             </div>
                         </div>
                     </div>
