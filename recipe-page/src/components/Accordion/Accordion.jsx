@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import './Accordion.css';
 
-export default function Accordion({header_Image, accordion_Image, title, description, ingredients, directions}) {
+export default function Accordion({ header_Image, accordion_Image, title, description, ingredients, directions }) {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="App">
             <div className="accordion">
                 <div onClick={() => setIsOpen(!isOpen)} className="accordion-header">
                     <h2>{title}</h2>
-                    <img className="header-image" src={header_Image} alt='Logo of cartoon'/>
-                    <div className = "accordion-indicator">
+                    <img className="header-image" src={header_Image} alt='Logo of cartoon' />
+                    <div className="accordion-indicator">
                         {isOpen ? '-' : '+'}
                     </div>
                 </div>
@@ -17,7 +17,6 @@ export default function Accordion({header_Image, accordion_Image, title, descrip
                     <div className="accordion-body">
                         <div className="accordion-body-content">
                             <div className="accordion-body-content-left">
-
                                 <img className="accordion_Image" src={accordion_Image} alt="Delicious dish" />
                             </div>
                             <div className="accordion-body-content-right">
