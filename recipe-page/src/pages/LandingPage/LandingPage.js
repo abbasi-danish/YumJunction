@@ -6,7 +6,6 @@ import baconPancakes from '../../images/bacon-pancakes.jpg';
 import couragelogo from '../../images/courage-logo.png';
 import spongeboblogo from '../../images/spongebob-logo.png';
 import krabbypatty from '../../images/krabbypatty.jpg';
-import flan from '../../images/courage-flan.png';
 import logo from '../../images/logo.png';
 import ratlogo from '../../images/ratlogo.png';
 import ratFood from '../../images/ratFood.jpg';
