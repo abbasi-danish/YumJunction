@@ -6,7 +6,7 @@ export default function newPage({ title, ingredients, directions, pageImage }) {
                 <h1>{title}</h1>
             </div>
             <div style={{ float: "right" }}>
-                <img src={pageImage} alt="Dish" style={{ width: 700, height: "auto", border: "3px solid black" }} />
+                <img className = "pageImage" src={pageImage} alt="Dish" />
             </div>
             <h2>Ingredients</h2>
             <ul>
