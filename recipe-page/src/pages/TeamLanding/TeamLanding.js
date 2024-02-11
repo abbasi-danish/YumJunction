@@ -1,13 +1,41 @@
 import React from 'react';
-import testphoto from '../../images/testphoto.jpeg';
+import Member from '../../components/Member/Member';
+import yunus from '../../images/yunus.jpg';
+import pakistan from '../../images/Pakistan.png';
+
+import './TeamLanding.css'; // Import the CSS file for styling
+function TeamLanding() {
+    return (
+        <div className="TeamLanding">
+            <div className="header" style={{ borderBottom: "3px solid black", width: "100%" }}>
+                <h1>Meet The Team</h1>
+            </div>
+            <div className="members-container"> 
+                <Member
+                    name="Yunus Kocaman"
+                    description="Spongebob is the fry cook at the Krusty Krab. He is known for his love of jellyfishing and his positive attitude."
+                    memberImage={yunus}
+                />
+                <Member
+                    name="Danish Abbasi"
+                    description="Patrick Star is SpongeBob's best friend. He is known for his love of ice cream and his lack of intelligence."
+                    memberImage={pakistan}
+                />
+                <Member
+                    name ="Joseph Sosa"
+                    description="Squidward Tentacles is SpongeBob's neighbor. He is known for his love of music and his dislike of SpongeBob."
+                    memberImage={pakistan}
+                />
+                <Member
+                    name ="Fitz Gerald"
+                    description="Mr. Krabs is the owner of the Krusty Krab. He is known for his love of money and his greed."   
+                    memberImage={pakistan}
+                />
 
 
-function teamlanding(){
-    return(
-        <div>
-            <img src={testphoto} alt="tomnjerry" />
+            </div>
         </div>
-    )
+    );
 }
 
-export default teamlanding;
+export default TeamLanding;
