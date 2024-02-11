@@ -24,7 +24,7 @@ function TeamLanding() {
                 />
                 <Member
                     name ="Joseph Sosa"
-                    description="Squidward Tentacles is SpongeBob's neighbor. He is known for his love of music and his dislike of SpongeBob."
+                    description="Joseph Sosa is SpongeBob's neighbor. He is known for his love of music and his dislike of SpongeBob."
                     memberImage={sosa}
                 />
                 <Member
