@@ -2,6 +2,7 @@ import React from 'react';
 import Member from '../../components/Member/Member';
 import yunus from '../../images/yunus.jpg';
 import pakistan from '../../images/Pakistan.png';
+import sosa from '../../images/sosa.jpg';
 
 import './TeamLanding.css'; // Import the CSS file for styling
 function TeamLanding() {
@@ -23,8 +24,8 @@ function TeamLanding() {
                 />
                 <Member
                     name ="Joseph Sosa"
-                    description="Squidward Tentacles is SpongeBob's neighbor. He is known for his love of music and his dislike of SpongeBob."
-                    memberImage={pakistan}
+                    description="Joseph Sosa is SpongeBob's neighbor. He is known for his love of music and his dislike of SpongeBob."
+                    memberImage={sosa}
                 />
                 <Member
                     name ="Fitz Gerald"
