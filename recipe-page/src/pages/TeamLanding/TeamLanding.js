@@ -14,7 +14,7 @@ function TeamLanding() {
             <div className="members-container"> 
                 <Member
                     name="Yunus Kocaman"
-                    description="Spongebob is the fry cook at the Krusty Krab. He is known for his love of jellyfishing and his positive attitude."
+                    description="Yunus Kocaman is a sophomore at Brandeis University. He is majoring in Computer Science and is intrested in full stack developing."
                     memberImage={yunus}
                 />
                 <Member
@@ -32,8 +32,6 @@ function TeamLanding() {
                     description="Mr. Krabs is the owner of the Krusty Krab. He is known for his love of money and his greed."   
                     memberImage={pakistan}
                 />
-
-
             </div>
         </div>
     );
