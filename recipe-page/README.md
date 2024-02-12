@@ -32,5 +32,3 @@ After running this command, you should be able to see the YumJunction applicatio
 
 
 Note: Remember to replace <your-repo-url> with the actual URL of your repository.
-
-
