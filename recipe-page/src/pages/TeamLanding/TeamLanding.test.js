@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import TeamLanding from './TeamLanding';
-import Member from '../../components/Member/Member';
 
 test('renders team landing page', () => {
     render(<TeamLanding />);
