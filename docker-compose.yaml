@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  recipe-page:
+    build: ./recipe-page
+    container_name: recipe-page-group-M
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./recipe-page:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - stdin_open=true
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    tty: true
