@@ -38,12 +38,13 @@ p {
   margin-top: 10px;
 }
 .member_img{
-  width: 100%;
+  width: 100px;
   height: 200px;
   border-radius: 5px;
   background: white;
   overflow: hidden;
   padding-top: 10px;
+  align-items: center;
 }
 
 
