@@ -41,3 +41,75 @@ nav a{
   height: 300px;
   border: 3px solid #000;
 }
+
+
+/*menubar*/
+.menu-sidebar{
+  display: none;
+}
+
+.cart-sidebar {
+    background: #ececec;
+    position: fixed;
+    top: 0;
+    right: -450px; /* Initially hide the sidebar */
+    width: 450px;
+    height: 100vh;
+    z-index: 10;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cart-sidebar.open {
+    right: 0; /* Slide in when open */
+}
+
+.close-cart {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+}
+
+.cart h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.total-sum {
+    text-align: center;
+}
+
+.clear-cart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.clear-cart .btn {
+    background-color: #f09d51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clear-cart .btn:hover {
+    background-color: #d4761d;
+}
+
+.overlay{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  background-color: #f3851f;
+  opacity: 0.3;
+  transition: all 0.3s linear;
+}
+
+.none{
+  display: none;
+}
