@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import perfectSandwich from '../../images/perfect-sandwich.jpg';
 import NewPage from '../../components/NewPage/NewPage';
 
