@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './pages/LandingPage/LandingPage';
-
+import { NavBar } from './components/Navbar/navbar';
 
 import Recipe2 from './pages/Recipe2/Recipe2';
 
@@ -15,9 +15,12 @@ import Recipe7 from './pages/Recipe7/Recipe7';
 
 import TeamLanding from './pages/TeamLanding/TeamLanding';
 
+
+
 function App() {
     return (
         <Router>
+            <NavBar/>
             <Routes>
                 <Route path="/" element={<LandingPage />} />
 
