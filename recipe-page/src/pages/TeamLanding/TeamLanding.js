@@ -1,42 +1,60 @@
 import React from 'react';
-import Member from '../../components/Member/Member';
 import yunus from '../../images/yunus.jpg';
 import pakistan from '../../images/Pakistan.png';
 import sosa from '../../images/sosa.jpg';
 
-import './TeamLanding.css'; // Import the CSS file for styling
+import './TeamLanding.css'; 
 function TeamLanding() {
-    return (
-        <div className="TeamLanding">
-            <div className="header" style={{ borderBottom: "3px solid black", width: "100%" }}>
-                <h1>Meet The Team</h1>
-            </div>
-            <div className="members-container"> 
-                <Member
-                    name="Yunus Kocaman"
-                    description="Spongebob is the fry cook at the Krusty Krab. He is known for his love of jellyfishing and his positive attitude."
-                    memberImage={yunus}
-                />
-                <Member
-                    name="Danish Abbasi"
-                    description="Patrick Star is SpongeBob's best friend. He is known for his love of ice cream and his lack of intelligence."
-                    memberImage={pakistan}
-                />
-                <Member
-                    name ="Joseph Sosa"
-                    description="Joseph Sosa is SpongeBob's neighbor. He is known for his love of music and his dislike of SpongeBob."
-                    memberImage={sosa}
-                />
-                <Member
-                    name ="Fitz Gerald"
-                    description="Mr. Krabs is the owner of the Krusty Krab. He is known for his love of money and his greed."   
-                    memberImage={pakistan}
-                />
+    const members = [
+        {
+            memberImage: yunus,
+            name: "Yunus Kocaman",
+            description: "Yunus Kocaman is a sophomore at Brandeis University. He is majoring in Computer Science and is interested in full stack development.",
+        },
+        {
+            memberImage: pakistan,
+            name: "Danish Abbasi",
+            description: "Danish Abbasi is SpongeBob's best friend. He is known for his love of ice cream and his lack of intelligence."
+        },
+        {
+            memberImage: sosa,
+            name: "Joseph Sosa",
+            description: "Joseph Sosa is SpongeBob's neighbor. He is known for his love of music and his dislike of SpongeBob."
+        },
+        {
+            memberImage: pakistan,
+            name: "Fitz Gerald",
+            description: "Fitz Gerald is the owner of the Krusty Krab. He is known for his love of money and his greed."
+        }
+    ]
+        return (
+            <div className="TeamLanding">
+                <div className="header" style={{ borderBottom: "3px solid black", width: "100%" }}>
+                    <h1>Meet The Team</h1>
+                </div>
+                <div className="team__wrapper">
+                {
+                    members.map((item, index) => (
+                        <div className='team__item' key={index}>
+                            <div className='team__img'>
+                                <img src={item.memberImage} alt='Member' />
+                            </div>
+                            <div className='team__details'>
+                                <h4>{item.name}</h4>
+                                <p className='description'>{item.description}</p>
+                                <div className='team__member-social'>
+                                    <span><i class='ri-linkedin-line'></i></span>
+                                    <span><i class='ri-twitter-line'></i></span>
+                                    <span><i class='ri-facebook-line'></i></span>
+                                </div>
+                            </div>
 
-
+                        </div>
+                        ))
+                    }
+                </div>
             </div>
-        </div>
-    );
+        );
 }
 
 export default TeamLanding;
