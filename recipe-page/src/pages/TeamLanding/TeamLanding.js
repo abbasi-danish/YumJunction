@@ -71,5 +71,9 @@ function TeamLanding() {
         );
 }
 
+<<<<<<< HEAD
 export default TeamLanding;
 >>>>>>> 02cc8a2300f6ec07ba5b5e889bd3451a6c5b162c
+=======
+export default TeamLanding;
+>>>>>>> shoppingcart-FitzWangaru
