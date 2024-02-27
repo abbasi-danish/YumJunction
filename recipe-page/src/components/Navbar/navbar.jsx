@@ -1,72 +1,54 @@
-import { useState } from 'react';
-import { Navbar, Nav, Container, Modal, Button, Form } from 'react-bootstrap';
-import { FaShoppingCart } from 'react-icons/fa';
+import { useContext, useState } from 'react';
+import { Navbar, Nav, Container, Modal, Button } from 'react-bootstrap';
+import { GroceryListContext } from '../GroceryList/grocerylistcontext'; 
+import AddGroceryItemForm from '../GroceryList/addgroceryitem';
+import styles from '../GroceryList/grocerylist.module.css';
 
 export const NavBar = () => {
-    const [showModal, setShowModal] = useState(false);
-    const [groceryList, setGroceryList] = useState([]);
-    const [newItem, setNewItem] = useState('');
+    const context = useContext(GroceryListContext);
+    // const { groceryList, handleIncrease, handleDecrease, handleRemoveItem, handleClearList } = useContext(GroceryListContext);
+    const [show, setShow] = useState(false);
 
-    const handleAddItem = () => {
-        setGroceryList([...groceryList, newItem]);
-        setNewItem('');
-    };
-
-    const handleRemoveItem = (index) => {
-        const updatedList = [...groceryList];
-        updatedList.splice(index, 1);
-        setGroceryList(updatedList);
-    };
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <>
-            <Navbar bg="dark" data-bs-theme="dark">
+            <Navbar bg="dark" variant="dark">
                 <Container>
                     <Nav className="me-auto">
                         <Nav.Link href="/">Main Page</Nav.Link>
                         <Nav.Link href="/TeamLanding">Team Page</Nav.Link>
                     </Nav>
-                    <Nav>
-                        <Nav.Link onClick={() => setShowModal(true)}>
-                            <FaShoppingCart />
-                        </Nav.Link>
+                    <Nav className="ml-auto">
+                        <Button variant="primary" onClick={handleShow}>
+                            Grocery List
+                        </Button>
                     </Nav>
                 </Container>
             </Navbar>
 
-            <Modal show={showModal} onHide={() => setShowModal(false)}>
+            <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Grocery List</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form>
-                        <Form.Group controlId="formItem">
-                            <Form.Label>Item</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter item"
-                                value={newItem}
-                                onChange={(e) => setNewItem(e.target.value)}
-                            />
-                        </Form.Group>
-                    </Form>
-                    <ul>
-                        {groceryList.map((item, index) => (
-                            <li key={index}>
-                                {item}
-                                <Button variant="danger" size="sm" onClick={() => handleRemoveItem(index)}>
-                                    -
-                                </Button>
-                            </li>
-                        ))}
-                    </ul>
+                    <AddGroceryItemForm />
+                    {context && context.groceryList.map((item, index) => (
+                          <div key={item.id} className={styles.groceryItem}>
+                            {item.name} - Quantity: {item.quantity}
+                            <button onClick={() => context.handleIncrease(index)}>+</button>
+                            <button onClick={() => context.handleDecrease(index)}>-</button>
+                            <button onClick={() => context.handleRemoveItem(index)}>Remove</button>
+                        </div>
+                    ))}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setShowModal(false)}>
-                        Close
+                    <Button variant="secondary" onClick={context && context.handleClearList}>
+                        Clear List
                     </Button>
-                    <Button variant="primary" onClick={handleAddItem}>
-                        Add Item
+                    <Button variant="primary" onClick={context &&context.handleClose}>
+                        Close
                     </Button>
                 </Modal.Footer>
             </Modal>
