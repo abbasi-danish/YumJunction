@@ -43,8 +43,12 @@ export const GroceryListProvider = ({ children }) => {
     setGroceryList(prevList => prevList.filter((item, i) => i !== index));
   };
 
+  const handleClearList = () => {
+    setGroceryList([]);
+  }
+
   return (
-    <GroceryListContext.Provider value={{ groceryList, handleAddItem, handleIncrease, handleDecrease, handleRemoveItem }}>
+    <GroceryListContext.Provider value={{ groceryList, handleAddItem, handleIncrease, handleDecrease, handleRemoveItem, handleClearList }}>
       {children}
     </GroceryListContext.Provider>
   );

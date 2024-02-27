@@ -3,8 +3,6 @@ import React, { useContext} from 'react';
 import yunus from '../../images/yunus.jpg';
 import pakistan from '../../images/Pakistan.png';
 import sosa from '../../images/sosa.jpg';
-
-import React from 'react';
 // import yunus from '../../images/yunus.jpg';
 // import pakistan from '../../images/Pakistan.png';
 // import sosa from '../../images/sosa.jpg';
