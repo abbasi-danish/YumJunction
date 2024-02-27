@@ -18,11 +18,12 @@ services:
 permissions:
   id-token: write
   contents: read
-  jobs: 
-    deploy-infra:
-      name: Deploy Infra
-      runs-on: windows-latest
-      environment: 
+jobs:
+  deploy-infra:
+    name: Deploy Infra
+    runs-on: windows-latest
+    environment: prd
+    steps:
       - name: Log into Azure
         uses: azure/login@v1
         with:
