@@ -15,11 +15,12 @@ import Recipe7 from './pages/Recipe7/Recipe7';
 
 import TeamLanding from './pages/TeamLanding/TeamLanding';
 
-
+import { GroceryListProvider } from './components/GroceryList/grocerylistprovider';
 
 function App() {
     return (
         <Router>
+            <GroceryListProvider>
             <NavBar/>
             <Routes>
                 <Route path="/" element={<LandingPage />} />
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/recipe7" element={<Recipe7 />} />
 
             </Routes>
+            </GroceryListProvider>
         </Router>
     );
 }
