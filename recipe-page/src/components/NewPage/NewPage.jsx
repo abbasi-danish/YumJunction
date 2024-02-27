@@ -1,4 +1,3 @@
-import React from "react"
 export default function newPage({ title, ingredients, directions, pageImage }) {
     return (
         <div className="page">
@@ -23,3 +22,5 @@ export default function newPage({ title, ingredients, directions, pageImage }) {
         </div>
     );
 }
+
+

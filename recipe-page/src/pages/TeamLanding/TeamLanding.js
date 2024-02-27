@@ -42,11 +42,7 @@ function TeamLanding() {
                             <div className='team__details'>
                                 <h4>{item.name}</h4>
                                 <p className='description'>{item.description}</p>
-                                <div className='team__member-social'>
-                                    <span><i class='ri-linkedin-line'></i></span>
-                                    <span><i class='ri-twitter-line'></i></span>
-                                    <span><i class='ri-facebook-line'></i></span>
-                                </div>
+                                
                             </div>
 
                         </div>
