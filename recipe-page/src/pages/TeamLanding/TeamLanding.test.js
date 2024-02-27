@@ -24,11 +24,12 @@ test('renders team landing page', () => {
     
     // Assert that the images are rendered
     const memberImages = screen.getAllByRole('img', {name: /Member/i});
-    expect(memberImages[0]).toHaveAttribute('src', 'yunus.jpg');
+    expect(memberImages[0]).toHaveAttribute('src', 'model.jpg');
 
-    expect(memberImages[1]).toHaveAttribute('src', 'Pakistan.png');
-    expect(memberImages[2]).toHaveAttribute('src', 'sosa.jpg');
-    expect(memberImages[3]).toHaveAttribute('src', 'Pakistan.png');
+    expect(memberImages[1]).toHaveAttribute('src', 'model.jpg');
+    expect(memberImages[2]).toHaveAttribute('src', 'model.jpg');
+    expect(memberImages[3]).toHaveAttribute('src', 'model.jpg');
+
     
   
 });
