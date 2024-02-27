@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { Navbar, Nav, Container, Modal, Button } from 'react-bootstrap';
 import { GroceryListContext } from '../GroceryList/grocerylistcontext'; // adjust the path as needed
 import AddGroceryItemForm from '../GroceryList/addgroceryitem';
-
+import styles from '../GroceryList/grocerylist.module.css';
 export const NavBar = () => {
     const { groceryList, handleIncrease, handleDecrease, handleRemoveItem, handleClearList } = useContext(GroceryListContext);
     const [show, setShow] = useState(false);
@@ -33,9 +33,9 @@ export const NavBar = () => {
                 <Modal.Body>
                     <AddGroceryItemForm />
                     {groceryList.map((item, index) => (
-                        <div key={index}>
+                          <div key={item.id} className={styles.groceryItem}>
                             {item.name} - Quantity: {item.quantity}
-                            <button onClick={(event) => handleIncrease(index)}>+</button>
+                            <button onClick={() => handleIncrease(index)}>+</button>
                             <button onClick={() => handleDecrease(index)}>-</button>
                             <button onClick={() => handleRemoveItem(index)}>Remove</button>
                         </div>

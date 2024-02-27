@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext} from 'react';
 import baconPancakes from '../../images/bacon-pancakes.jpg';
 import NewPage from '../../components/NewPage/NewPage';
+
+import { GroceryListContext } from '../../components/GroceryList/grocerylistcontext';
+
 function Recipe2() {
+    const { groceryList, setGroceryList } = useContext(GroceryListContext);
     const ingredients = ["285g all-purpose flour", "35g sugar", "1 ½ tsp baking powder", "1 ½ tsp baking soda", "Kosher salt", "2 ½ cups buttermilk", "2 eggs", "3 Tbsp melted butter", "Bacon", "Maple Syrup"];
     const directions = [
         "In a bowl, combine 285 grams of all-purpose flour, 35 grams of sugar, 1 ½ tsp each of baking powder and baking soda, and some kosher salt. Whisk to combine.",

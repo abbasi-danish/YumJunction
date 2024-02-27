@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Accordion from '../../components/Accordion/Accordion';
 import perfectSandwich from '../../images/perfect-sandwich.jpg';
 import adventureTime from '../../images/adventure-time.jpg';
@@ -16,8 +16,15 @@ import ForceofEvil from '../../images/ForceofEvil.jpg';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
+import { GroceryListContext } from '../../components/GroceryList/grocerylistcontext';
 
 function LandingPage() {
+  const { groceryList, setGroceryList } = useContext(GroceryListContext);
+
+  const addItem = (item) => {
+    setGroceryList(prevList => [...prevList, item]);
+  };
+
   return (
     <div className="LandingPage">
       <div className="header" style={{ borderBottom: "3px solid black", width: "100%"}}>

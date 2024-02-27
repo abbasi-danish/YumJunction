@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext} from 'react';
 import yunus from '../../images/yunus.jpg';
 import pakistan from '../../images/Pakistan.png';
 import sosa from '../../images/sosa.jpg';
 
+import { GroceryListContext } from '../../components/GroceryList/grocerylistcontext';
+
 import './TeamLanding.css'; 
 function TeamLanding() {
+    const { groceryList, setGroceryList } = useContext(GroceryListContext);
+
+
     const members = [
         {
             memberImage: yunus,
