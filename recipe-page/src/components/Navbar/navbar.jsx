@@ -1,10 +1,12 @@
 import { useContext, useState } from 'react';
 import { Navbar, Nav, Container, Modal, Button } from 'react-bootstrap';
-import { GroceryListContext } from '../GroceryList/grocerylistcontext'; // adjust the path as needed
+import { GroceryListContext } from '../GroceryList/grocerylistcontext'; 
 import AddGroceryItemForm from '../GroceryList/addgroceryitem';
 import styles from '../GroceryList/grocerylist.module.css';
+
 export const NavBar = () => {
-    const { groceryList, handleIncrease, handleDecrease, handleRemoveItem, handleClearList } = useContext(GroceryListContext);
+    const context = useContext(GroceryListContext);
+    // const { groceryList, handleIncrease, handleDecrease, handleRemoveItem, handleClearList } = useContext(GroceryListContext);
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -32,20 +34,20 @@ export const NavBar = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <AddGroceryItemForm />
-                    {groceryList.map((item, index) => (
+                    {context && context.groceryList.map((item, index) => (
                           <div key={item.id} className={styles.groceryItem}>
                             {item.name} - Quantity: {item.quantity}
-                            <button onClick={() => handleIncrease(index)}>+</button>
-                            <button onClick={() => handleDecrease(index)}>-</button>
-                            <button onClick={() => handleRemoveItem(index)}>Remove</button>
+                            <button onClick={() => context.handleIncrease(index)}>+</button>
+                            <button onClick={() => context.handleDecrease(index)}>-</button>
+                            <button onClick={() => context.handleRemoveItem(index)}>Remove</button>
                         </div>
                     ))}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClearList}>
+                    <Button variant="secondary" onClick={context && context.handleClearList}>
                         Clear List
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    <Button variant="primary" onClick={context &&context.handleClose}>
                         Close
                     </Button>
                 </Modal.Footer>
