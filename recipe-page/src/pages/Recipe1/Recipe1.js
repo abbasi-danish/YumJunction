@@ -21,6 +21,7 @@ function Recipe1() {
                     directions={directions}
                 />
             </div>
+
         </div>
     );
 }
