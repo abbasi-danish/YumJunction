@@ -28,7 +28,7 @@ function LandingPage() {
             </div>
             <div className = "website-description">
                 <h2 style={{ textAlign: "left" }}>Welcome!</h2>
-                <p style={{ textAlign: "left" }}>YumJunction is a website that provides recipes for food from your favorite TV shows and movies. We hope you enjoy!</p>
+                <p style={{ textAlign: "left" }}>YumJunction is a website that provides recipes for food from your favorite TV shows and movies. We hope you enjoy! THIS WORKS !!!!!!</p>
             </div>
         <Accordion 
           header_Image={adventureTime}
