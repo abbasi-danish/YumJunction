@@ -25,7 +25,7 @@ jobs:
       - name: Build and deploy Container App
         uses: azure/container-apps-deploy-action@v1
         with:
-          appSourcePath: ${{ github.workspace }}/recipe-page/Dockerfile
+          appSourcePath: /recipe-page
           acrName: recipepageregistry
           containerAppName: recipe
           resourceGroup: GroupMContainer
