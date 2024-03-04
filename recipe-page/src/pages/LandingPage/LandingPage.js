@@ -1,16 +1,10 @@
 import React from 'react';
-import perfectSandwich from '../../images/perfect-sandwich.jpg';
 import adventureTime from '../../images/adventure-time.jpg';
-import baconPancakes from '../../images/bacon-pancakes.jpg';
 import couragelogo from '../../images/courage-logo.png';
 import spongeboblogo from '../../images/spongebob-logo.png';
-import krabbypatty from '../../images/krabbypatty.jpg';
 import logo from '../../images/logo.png';
 import ratlogo from '../../images/ratlogo.png';
-import ratFood from '../../images/ratFood.jpg';
-import frogfood from '../../images/frogfood.jpg';
 import froglogo from '../../images/froglogo.png';
-import banana from '../../images/FoodofStar.png';
 import ForceofEvil from '../../images/ForceofEvil.jpg';
 import './LandingPage.css';
 import Accordion from 'react-bootstrap/Accordion';
