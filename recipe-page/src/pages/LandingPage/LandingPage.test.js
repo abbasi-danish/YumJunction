@@ -25,18 +25,20 @@ test('accordion expands and collapses when clicked', () => {
   );
   
   // Tests a few accordion header elements
-  const flanAccordionHeader = screen.getByText(/Courage the Cowardly Dog/i);
-  const krabbyPattyAccordionHeader = screen.getByText(/Spongebob Squarepants/i);
-  const banagicIceCreamAccordionHeader = screen.getByText(/Star vs. Forces of Evil/i);
-  const beignetsAccordionHeader = screen.getByText(/Princess and the Frog/i);
-  const ratatouilleAccordionHeader = screen.getByText(/Ratatouille/i);
+  const flanAccordionHeader = screen.getByText(/Courage the Cowardly Dog: Muriel's Flan/i);
+  const krabbyPattyAccordionHeader = screen.getByText(/Spongebob Squarepants: Krabby Patty/i);
+  const banagicIceCreamAccordionHeader = screen.getByText(/Star vs. Forces of Evil: Banagic IceCream/i);
+  const beignetsAccordionHeader = screen.getByText(/Princess and the Frog: Beignets/i);
+  const ratatouilleAccordionHeader = screen.getByText(/Ratatouille: Ratatouille/i);
   
   // Check if the accordion content is initially hidden
-  expect(screen.queryByText(/In the classic episode 'The Great Fusilli,'/i)).not.toBeInTheDocument();
-  expect(screen.queryByText(/In the underwater city of Bikini Bottom, Spongebob Squarepants works as a fry cook at the Krusty Krab, where he crafts the world-famous Krabby Patty./i)).not.toBeInTheDocument();
-  expect(screen.queryByText(/The Banagic Ice Cream is a magical treat from the show Star vs. Forces of Evil./i)).not.toBeInTheDocument();
-  expect(screen.queryByText(/Indulge in the enchanting joy of Princess and the Frog Beignets—irresistibly fluffy, golden pillows of delight that bring a touch of Disney magic to your kitchen/i)).not.toBeInTheDocument();
-  expect(screen.queryByText(/Take part in the favor packed, adventure with Remy's Ratatouille./i)).not.toBeInTheDocument
+  expect(flanAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
+  expect(krabbyPattyAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
+  expect(banagicIceCreamAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
+  expect(beignetsAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
+  expect(ratatouilleAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
+
+
   // Click on the accordion headers to expand them
   fireEvent.click(flanAccordionHeader);
   fireEvent.click(krabbyPattyAccordionHeader);
@@ -45,11 +47,12 @@ test('accordion expands and collapses when clicked', () => {
   fireEvent.click(ratatouilleAccordionHeader);
   
   // Check if the accordion content is now visible
-  expect(screen.getByText(/In the classic episode 'The Great Fusilli,'/i)).toBeInTheDocument();
-  expect(screen.getByText(/In the underwater city of Bikini Bottom, Spongebob Squarepants works as a fry cook at the Krusty Krab, where he crafts the world-famous Krabby Patty./i)).toBeInTheDocument();
-  expect(screen.getByText(/The Banagic Ice Cream is a magical treat from the show Star vs. Forces of Evil./i)).toBeInTheDocument();
-  expect(screen.getByText(/Indulge in the enchanting joy of Princess and the Frog Beignets—irresistibly fluffy, golden pillows of delight that bring a touch of Disney magic to your kitchen/i)).toBeInTheDocument();
-  expect(screen.getByText(/Take part in the favor packed, adventure with Remy's Ratatouille./i)).toBeInTheDocument
+  expect(flanAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'true');
+  expect(krabbyPattyAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'true');
+  expect(banagicIceCreamAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'true');
+  expect(beignetsAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'true');
+  expect(ratatouilleAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'true');
+
   
   // Click on the accordion headers again to collapse them
   fireEvent.click(flanAccordionHeader);
@@ -59,9 +62,9 @@ test('accordion expands and collapses when clicked', () => {
   fireEvent.click(ratatouilleAccordionHeader);
   
   // Check if the accordion content is now hidden again
-  expect(screen.queryByText(/In the classic episode 'The Great Fusilli,'/i)).not.toBeInTheDocument();
-  expect(screen.queryByText(/In the underwater city of Bikini Bottom, Spongebob Squarepants works as a fry cook at the Krusty Krab, where he crafts the world-famous Krabby Patty./i)).not.toBeInTheDocument();
-  expect(screen.queryByText(/The Banagic Ice Cream is a magical treat from the show Star vs. Forces of Evil./i)).not.toBeInTheDocument();
-  expect(screen.queryByText(/Indulge in the enchanting joy of Princess and the Frog Beignets—irresistibly fluffy, golden pillows of delight that bring a touch of Disney magic to your kitchen/i)).not.toBeInTheDocument();
-  expect(screen.queryByText(/Take part in the favor packed, adventure with Remy's Ratatouille./i)).not.toBeInTheDocument
+  expect(flanAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
+  expect(krabbyPattyAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
+  expect(banagicIceCreamAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
+  expect(beignetsAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
+  expect(ratatouilleAccordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
 });});
