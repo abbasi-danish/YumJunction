@@ -1,0 +1,10 @@
+.stylish-list {
+    padding: 10px;
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    list-style-type: circle;
+  }
+  
+  .stylish-list li {
+    margin-bottom: 5px;
+  }
