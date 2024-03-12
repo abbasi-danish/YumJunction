@@ -1,5 +1,4 @@
 // server/index.js
-
 const express = require("express");
 const path = require("path");
 
@@ -7,15 +6,21 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+const cors = require('cors');
+
+app.use(cors());
+
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '../../build')))
+
+app.use('/images', express.static(path.join(__dirname, 'images')));
 let accordionItems = [
     {
         headerTitle: "Adventure Time: Perfect Sandwich",
         headerBody: "In the whimsical world of Adventure Time, Jake the Dog crafts a sandwich beyond imagination in 'Time Sandwich.' With layers of savory bacon, crisp lettuce, zesty mustard, and a sprinkle of magic, each bite becomes a journey through flavor and fantasy, capturing the essence of Ooo in every delicious bite.",
         imageAlt: "adventure-time-logo",
-        imageSrc: "../../images/adventure-time.jpg",
+        imageSrc: "http://localhost:3001/images/adventure-time.jpg",
         link: "/recipe1"
 
     }, 
@@ -23,14 +28,14 @@ let accordionItems = [
         headerTitle: "Adventure Time: Bacon Pancakes",
         headerBody: "Discover the whimsical delight of Jake's Bacon Pancakes from Adventure Time! This enchanting dish combines fluffy pancakes with crispy bacon, creating a magical blend of sweet and savory flavors. Whisk together a batter of flour, sugar, and spices, then cook to golden perfection in a cast iron skillet. Top with butter and maple syrup for a truly adventurous breakfast experience that's sure to delight fans of all ages!",
         imageAlt: "adventure-time-logo",
-        imageSrc: '../../images/adventure-time.jpg',
+        imageSrc: 'http://localhost:3001/images/adventure-time.jpg',
         link: "/recipe5"
     },
     {
         headerTitle: "Courage the Cowardly Dog: Muriel's Flan",
         headerBody: "In the classic episode 'The Great Fusilli,' Courage the Cowardly Dog must save Muriel from the clutches of the evil Fusilli, who plans to turn her into a flan! In this recipe, we'll be making a flan of our own, with a rich caramel sauce and a creamy custard filling.",
         imageAlt: "courage-logo", 
-        imageSrc: "../../images/courage-logo.png",
+        imageSrc: "http://localhost:3001/images/courage-logo.png",
         link: "/recipe2"
     },
 
@@ -40,7 +45,7 @@ let accordionItems = [
         headerTitle: "Star vs. Forces of Evil: Banagic IceCream",
         headerBody: "The Banagic Ice Cream is a magical treat from the show Star vs. Forces of Evil. This recipe is a delicious combination of bananas, magic, and ice cream. It's a perfect treat for a hot summer day or a magical adventure!",
         imageAlt: "starwars-logo",
-        imageSrc: '../../images/ForceofEvil.jpg',
+        imageSrc: 'http://localhost:3001/images/ForceofEvil.jpg',
         link: "/recipe3"
     },
 
@@ -48,7 +53,7 @@ let accordionItems = [
         headerTitle: "Spongebob Squarepants: Krabby Patty",
         headerBody: "In the underwater city of Bikini Bottom, Spongebob Squarepants works as a fry cook at the Krusty Krab, where he crafts the world-famous Krabby Patty. With a secret recipe known only to Mr. Krabs, the Krabby Patty is a mouthwatering blend of lettuce, cheese, tomatoes, tartar sauce, mayo, flour, tumeric, sea salt, land salt, barnacle shavings, the patty, mustard, ketchup, the secret formula, two buns, onions, and pickles. In this recipe, we'll be making our own Krabby Patty, with a few substitutions for the secret formula.",
         imageAlt: "spongebob-logo",
-        imageSrc: '../../images/spongebob-logo.png',
+        imageSrc: 'http://localhost:3001/images/spongebob-logo.png',
         link: "/recipe6"
     },
 
@@ -57,7 +62,7 @@ let accordionItems = [
         headerTitle: "Princess and the Frog: Beignets",
         headerBody: "Indulge in the enchanting joy of Princess and the Frog Beignets—irresistibly fluffy, golden pillows of delight that bring a touch of Disney magic to your kitchen",
         imageAlt: "frog-logo",
-        imageSrc: '../../images/froglogo.png',
+        imageSrc: 'http://localhost:3001/images/froglogo.png',
         link: '/recipe4'
     },
 
@@ -65,7 +70,7 @@ let accordionItems = [
         headerTitle: "Ratatouille: Ratatouille",
         headerBody: "Take part in the favor packed, adventure with Remy's Ratatouille. Inspired by Disney's delightful rat chef, expertly layered vegetables dancing in perfect harmony, creating a symphony of taste that will transport you back to your childhood!",
         imageAlt: "rat-logo", 
-        imageSrc: '../../images/ratlogo.png',
+        imageSrc: 'http://localhost:3001/images/ratlogo.png',
         link: '/recipe7'
     }
 ];

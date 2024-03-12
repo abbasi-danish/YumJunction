@@ -10,9 +10,12 @@ function LandingPage() {
   const [accordions, setAccordions] = useState([]);
 
   useEffect(() => {
-    fetch('/api/accordionItems')
+    fetch('http://localhost:3001/api/accordionItems')
       .then(res => res.json())
-      .then(data => setAccordions(data));
+      .then(data => {
+        console.log('Fetched data:', data);
+        setAccordions(data);
+      });
   }, []);
 
   return (
@@ -27,19 +30,19 @@ function LandingPage() {
                 <h2 style={{ textAlign: "left" }}>Welcome!</h2>
                 <p style={{ textAlign: "left" }}>YumJunction is a website that provides recipes for food from your favorite TV shows and movies. We hope you enjoy! THIS WORKS !!!!!!</p>
             </div>
-
-            {accordions.map(accordion => (
-              <Accordion key = {index}>
+            {accordions.map((accordion, index) => (
+              <Accordion>
                 <AccordionItem
+                  key = {index}
                   headerText={accordion.headerTitle}
                   bodyText={accordion.headerBody}
                   imageAlt={accordion.imageAlt}
                   imageSrc={accordion.imageSrc}
-                  linkTo={accordion.linkTo}
+                  linkTo={accordion.link}
                 />
-              </Accordion>
-            ))}
 
+</Accordion>
+            ))}
             </div>
   );
 }; 

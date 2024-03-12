@@ -16,7 +16,7 @@ test('renders YumJunction header', () => {
   expect(headerElement.length).toBe(2);
 });
 
-test('accordion expands and collapses when clicked', () => {
+test('accordion expands and collapses when clicked', async () => {
   render(
   <Router>
     <LandingPage />
@@ -25,7 +25,7 @@ test('accordion expands and collapses when clicked', () => {
   );
   
   // Tests a few accordion header elements
-  const flanAccordionHeader = screen.getByText(/Courage the Cowardly Dog: Muriel's Flan/i);
+  const flanAccordionHeader = await screen.findByText(/Courage the Cowardly Dog: Muriel's Flan/i);
   const krabbyPattyAccordionHeader = screen.getByText(/Spongebob Squarepants: Krabby Patty/i);
   const banagicIceCreamAccordionHeader = screen.getByText(/Star vs. Forces of Evil: Banagic IceCream/i);
   const beignetsAccordionHeader = screen.getByText(/Princess and the Frog: Beignets/i);
