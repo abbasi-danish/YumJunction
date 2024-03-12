@@ -1,4 +1,20 @@
 /* Accordion.css */
+
+.accordion {
+  width: 100%;
+}
+
+.accordion .accordion-item {
+  width: 100%;
+}
+
+.accordion .accordion-header {
+  width: 100%;
+}
+
+.accordion .accordion-body {
+  width: 100%;
+}
 .accordion {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
