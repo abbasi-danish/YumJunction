@@ -1,13 +1,7 @@
-
 import React from 'react';
-// import yunus from '../../images/yunus.jpg';
-// import pakistan from '../../images/Pakistan.png';
-// import sosa from '../../images/sosa.jpg';
 import model from '../../images/model.jpg';
-
-
-
 import './TeamLanding.css'; 
+
 function TeamLanding() {
 
     const members = [
