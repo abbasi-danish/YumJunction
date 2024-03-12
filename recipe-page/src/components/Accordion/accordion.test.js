@@ -1,50 +1,88 @@
 import React from "react";
+import {BrowserRouter as Router} from 'react-router-dom';
 import { render, screen, fireEvent } from "@testing-library/react";
-import Accordion from "./Accordion";
+import AccordionItem from "./AccordionItem";
+import {Accordion} from 'react-bootstrap';
+
+
 
 
 describe('Accordion', () => {
     test('renders Accordion component with correct title and description', () => {
       const header_Image = '../../images/testphoto.jpeg';
       const title = 'Accordion Title';
-      const description = 'Accordion Description';
+      const placeHolder = '/'
+      const imageAlt = 'test'
+      const bodyText = 'description'
   
-      render(<Accordion header_Image={header_Image} title={title} description={description} />);
+      render(
+      <Router>
+      <Accordion defaultActiveKey="-1">
+        <AccordionItem
+      imageSrc={header_Image} 
+      imageAlt={imageAlt} 
+      headerText={title} 
+      bodyText={bodyText} 
+      linkTo={placeHolder}
+        />
+      </Accordion>
+      
+      </Router>
+      );
 
-      // Assert that the description is initially hidden
-      expect(screen.queryByText(description)).not.toBeInTheDocument();
+    // Assert that accordion is initially collapsed
+    const header = screen.getByText(title);
+    expect(header.closest('button')).toHaveAttribute('aria-expanded', 'false');
 
       // Assert that the title is rendered
       expect(screen.getByText(title)).toBeInTheDocument();
 
       // Assert that image is rendered
-      expect(screen.getByAltText('Logo of cartoon')).toBeInTheDocument();
+      expect(screen.getByAltText('test')).toBeInTheDocument();
       
     });
+
+
   
     test('toggles accordion body when header is clicked', () => {
-      const header_Image = '../../images/testphoto.jpeg';
-      const title = 'Accordion Title';
-      const description = 'Accordion Description';
+      const imageSrc = '../../images/testphoto.jpeg';
+      const headerText = 'Accordion Title';
+      const bodyText = 'Accordion Description';
+      const placeHolder = '/'
+      const imageAlt = 'test'
   
-      render(<Accordion header_Image={header_Image} title={title} description={description} />);
+      render(
+
+      <Router>
+      <Accordion defaultActiveKey="-1">
+        <AccordionItem
+      imageSrc={imageSrc} 
+      imageAlt={imageAlt} 
+      headerText={headerText} 
+      bodyText={bodyText} 
+      linkTo={placeHolder}
+        />
+      </Accordion>
+      </Router>
+      );
   
-      const accordionHeader = screen.getByText(title);
+     
   
       // Assert that the accordion body is initially hidden
-      expect(screen.queryByText(description)).not.toBeInTheDocument();
+      const accordionHeader = screen.getByText(headerText);
+      expect(accordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
   
       // Click on the accordion header to toggle the accordion body
       fireEvent.click(accordionHeader);
   
       // Assert that the accordion body is now visible
-      expect(screen.getByText(description)).toBeInTheDocument();
+      expect(accordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'true');
   
       // Click on the accordion header again to toggle the accordion body back to hidden
       fireEvent.click(accordionHeader);
   
       // Assert that the accordion body is hidden again
-      expect(screen.queryByText(description)).not.toBeInTheDocument();
+      expect(accordionHeader.closest('button')).toHaveAttribute('aria-expanded', 'false');
     });
   });
         

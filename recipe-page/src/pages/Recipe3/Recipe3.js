@@ -1,7 +1,10 @@
 import React from 'react';
 import banana from '../../images/FoodofStar.png';
 import NewPage from '../../components/NewPage/NewPage';
+
+
 function Recipe3() {
+    
     const ingredients =["4 ripe bananas, Yellow food coloring"];
     const directions = [
         "Peel and thinly slice the bananas. Freeze the banana slices for at least two hours. Place the frozen banana slices in a food processor.",

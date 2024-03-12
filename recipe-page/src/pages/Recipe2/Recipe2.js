@@ -3,7 +3,10 @@ import '../../index.css';
 import flan from '../../images/courage-flan.png';
 import NewPage from '../../components/NewPage/NewPage';
 
+
+
 function Recipe2() {
+  
   const ingredients = ["1 cup granulated sugar", "1/4 cup water", "4 large eggs", "2 cups whole milk", "1 teaspoon vanilla extract"];
   const directions = [
     "Preheat oven to 350°F. Place a 9-inch round cake pan in a large roasting pan.",

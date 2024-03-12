@@ -2,14 +2,21 @@
   text-align: center;
 }
 
+.logo{
+  width:100px;
+  height:100px;
+  margin-left:20px;
+  }
+
+/* 
 .accordion-header{
   cursor: pointer;
   padding:10px;
   position: relative;
   border: 5px solid black;
-}
+} */
 
-.accordion-header:hover{
+/* .accordion-header:hover{
 background-color: #eee;
 }
 
@@ -25,17 +32,17 @@ position: absolute;
 font-size: 30px;
 right: 30px; 
 top: 30px;
-}
+} */
 
-.accordion-body{
+/* .accordion-body{
 text-align:left;
 font-size:20px;
 padding-left:10px;
 padding-right:10px;
 background-color: #ac9181;
 border: 3px solid black;
-}
-.header{
+} */
+/* .header{
 display:flex;
 align-items:center;
 justify-content:center;
@@ -44,11 +51,7 @@ margin-left: auto;
 margin-right: auto;
 width: fit-content;
 }
-.logo{
-width:100px;
-height:100px;
-margin-left:20px;
-}
+
 .instructions{
 font-size:20px
-}
+} */
