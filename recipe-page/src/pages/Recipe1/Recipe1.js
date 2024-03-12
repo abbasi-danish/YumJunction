@@ -3,7 +3,6 @@ import perfectSandwich from '../../images/perfect-sandwich.jpg';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
 
-
 function Recipe1() {
     const ingredients = [
         " 1 boneless ribeye (the size of your bread)",
