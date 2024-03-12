@@ -1,6 +1,7 @@
 import React from 'react';
 import perfectSandwich from '../../images/perfect-sandwich.jpg';
 import NewPage from '../../components/NewPage/NewPage';
+import Carousel from '../../components/Carousel/Carousel';
 
 
 function Recipe1() {
@@ -39,14 +40,23 @@ function Recipe1() {
 
     return (
         <div>
-            <div className="recipe">
+            <div className='cookingMode'> 
+                <Carousel
+                    slides={[
+                        { type: 'text', content: 'Vacuum seal ribeye with thyme, rosemary, salt, and pepper, and place in a sous vide bath set at 135°F for 2 hours, Preheat oven to 350°F.  Steam lobster tail for for 8 minutes, remove meat and reserve for other applications.  Break up the shell into pieces and place in a high-powered blender along with vegetable oil, and blend for 30-60 seconds:' },
+                        { type: 'text', content: 'or until lobster is finely ground.  Simmer mixture for 15 minutes, and strain through a fine mesh sieve.  Set aside to cool completely. In an immersion blender cup, combine lemon and egg yolks.  Blend briefly to combine, and with immersion blender running, slowly pour lobster oil down the side of the cup, until a thick aioli forms.  Refrigerate until ready to use.' },
+                    ]}
+                    /* Each slide will contain a new step*/
+                    title='The Perfect Sandwich'
+                />
+            </div>
+            <div className='recipe'>
                 <NewPage
-                    title="The Perfect Sandwich"
+                    title='The Perfect Sandwich'
                     pageImage={perfectSandwich}
                     ingredients={ingredients}
                     directions={directions}
                 />
-
             </div>
         </div>
     );
