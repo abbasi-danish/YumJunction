@@ -10,11 +10,70 @@ const app = express();
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '../../build')))
+let accordionItems = [
+    {
+        headerTitle: "Adventure Time: Perfect Sandwich",
+        headerBody: "In the whimsical world of Adventure Time, Jake the Dog crafts a sandwich beyond imagination in 'Time Sandwich.' With layers of savory bacon, crisp lettuce, zesty mustard, and a sprinkle of magic, each bite becomes a journey through flavor and fantasy, capturing the essence of Ooo in every delicious bite.",
+        imageAlt: "adventure-time-logo",
+        imageSrc: "../../images/adventure-time.jpg",
+        link: "/recipe1"
 
+    }, 
+    { 
+        headerTitle: "Adventure Time: Bacon Pancakes",
+        headerBody: "Discover the whimsical delight of Jake's Bacon Pancakes from Adventure Time! This enchanting dish combines fluffy pancakes with crispy bacon, creating a magical blend of sweet and savory flavors. Whisk together a batter of flour, sugar, and spices, then cook to golden perfection in a cast iron skillet. Top with butter and maple syrup for a truly adventurous breakfast experience that's sure to delight fans of all ages!",
+        imageAlt: "adventure-time-logo",
+        imageSrc: '../../images/adventure-time.jpg',
+        link: "/recipe5"
+    },
+    {
+        headerTitle: "Courage the Cowardly Dog: Muriel's Flan",
+        headerBody: "In the classic episode 'The Great Fusilli,' Courage the Cowardly Dog must save Muriel from the clutches of the evil Fusilli, who plans to turn her into a flan! In this recipe, we'll be making a flan of our own, with a rich caramel sauce and a creamy custard filling.",
+        imageAlt: "courage-logo", 
+        imageSrc: "../../images/courage-logo.png",
+        link: "/recipe2"
+    },
+
+  
+
+    {
+        headerTitle: "Star vs. Forces of Evil: Banagic IceCream",
+        headerBody: "The Banagic Ice Cream is a magical treat from the show Star vs. Forces of Evil. This recipe is a delicious combination of bananas, magic, and ice cream. It's a perfect treat for a hot summer day or a magical adventure!",
+        imageAlt: "starwars-logo",
+        imageSrc: '../../images/ForceofEvil.jpg',
+        link: "/recipe3"
+    },
+
+    {
+        headerTitle: "Spongebob Squarepants: Krabby Patty",
+        headerBody: "In the underwater city of Bikini Bottom, Spongebob Squarepants works as a fry cook at the Krusty Krab, where he crafts the world-famous Krabby Patty. With a secret recipe known only to Mr. Krabs, the Krabby Patty is a mouthwatering blend of lettuce, cheese, tomatoes, tartar sauce, mayo, flour, tumeric, sea salt, land salt, barnacle shavings, the patty, mustard, ketchup, the secret formula, two buns, onions, and pickles. In this recipe, we'll be making our own Krabby Patty, with a few substitutions for the secret formula.",
+        imageAlt: "spongebob-logo",
+        imageSrc: '../../images/spongebob-logo.png',
+        link: "/recipe6"
+    },
+
+
+    {
+        headerTitle: "Princess and the Frog: Beignets",
+        headerBody: "Indulge in the enchanting joy of Princess and the Frog Beignets—irresistibly fluffy, golden pillows of delight that bring a touch of Disney magic to your kitchen",
+        imageAlt: "frog-logo",
+        imageSrc: '../../images/froglogo.png',
+        link: '/recipe4'
+    },
+
+    {
+        headerTitle: "Ratatouille: Ratatouille",
+        headerBody: "Take part in the favor packed, adventure with Remy's Ratatouille. Inspired by Disney's delightful rat chef, expertly layered vegetables dancing in perfect harmony, creating a symphony of taste that will transport you back to your childhood!",
+        imageAlt: "rat-logo", 
+        imageSrc: '../../images/ratlogo.png',
+        link: '/recipe7'
+    }
+];
 
 let recipes = [
     {
         id: 1,
+        pageImage: '../../images/perfect-sandwich.jpg',
         title: "Perfect Sandwich",
         ingredients: ["1 boneless ribeye (the size of your bread)",
         "2 sprigs thyme",
@@ -46,6 +105,7 @@ let recipes = [
 
     {
         id: 2,
+        pageImage: '../../images/courage-flan.png',
         title: "Muriel's Flan",
         ingredients: ["1 cup sugar",
         "1/4 cup water",
@@ -66,6 +126,7 @@ let recipes = [
 
     {
         id: 3,
+        pageImage: '../../images/FoodofStar.png',
         title: "Banagic Ice Cream",
         ingredients: ["3 ripe bananas",
         "1/4 cup sugar",
@@ -85,6 +146,7 @@ let recipes = [
     
         {
             id: 4,
+            pageImage: '../../images/frogfood.jpg',
             title: "Beignets",
             ingredients: ["1 1/2 cups warm water (100° to 110°)",
             "1/2 cup granulated sugar",
@@ -104,6 +166,7 @@ let recipes = [
     
         {
             id: 5,
+            pageImage: '../../images/bacon-pancakes.jpg',
             title: "Bacon Pancakes",
             ingredients: ["1 cup all-purpose flour",
             "1 tablespoon sugar",
@@ -123,10 +186,31 @@ let recipes = [
     
         {
             id: 6,
+            pageImage: '../../images/krabbypatty.jpg',
             title: "Krabby Patty",
             ingredients: ["1/4 cup dried bread crumbs",
             "1/4 cup mayonnaise",
             "1/4 cup ketchup"]
+
+        },
+
+        {
+            id: 7,
+            pageImage: '../../images/ratFood.jpg',
+            title: "Ratatouille",
+            ingredients: ["1 (6 ounce) can tomato paste",
+            "1/2 onion, chopped",
+            "1/4 cup minced garlic",
+            "3/4 cup water",
+            "4 tablespoons olive oil, divided",
+            "Salt and ground black pepper to taste",
+            "1 small eggplant, trimmed and very thinly sliced",
+            "1 zucchini, trimmed and very thinly sliced",
+            "1 yellow squash, trimmed and very thinly sliced",
+            "1 red bell pepper, cored and very thinly sliced",
+            "1 yellow bell pepper, cored and very thinly sliced",
+            "1 teaspoon fresh thyme leaves",
+            "3 tablespoons mascarpone cheese"],
 
         }
 ];
@@ -134,6 +218,10 @@ let recipes = [
 app.get("/api/recipes", (req, res) => {
     res.json(recipes);
 
+});
+
+app.get("/api/accordionItems", (req, res) => {
+    res.json(accordionItems);
 });
 
 app.get("/api", (req, res) => {

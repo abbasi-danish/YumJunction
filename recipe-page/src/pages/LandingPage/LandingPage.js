@@ -1,18 +1,19 @@
 import React from 'react';
-import adventureTime from '../../images/adventure-time.jpg';
-import couragelogo from '../../images/courage-logo.png';
-import spongeboblogo from '../../images/spongebob-logo.png';
+import { useEffect, useState } from 'react';
 import logo from '../../images/logo.png';
-import ratlogo from '../../images/ratlogo.png';
-import froglogo from '../../images/froglogo.png';
-import ForceofEvil from '../../images/ForceofEvil.jpg';
 import './LandingPage.css';
 import Accordion from 'react-bootstrap/Accordion';
 import AccordionItem from '../../components/Accordion/AccordionItem';
 
 
 function LandingPage() {
+  const [accordions, setAccordions] = useState([]);
 
+  useEffect(() => {
+    fetch('/api/accordionItems')
+      .then(res => res.json())
+      .then(data => setAccordions(data));
+  }, []);
 
   return (
     <div className="LandingPage">
@@ -26,7 +27,23 @@ function LandingPage() {
                 <h2 style={{ textAlign: "left" }}>Welcome!</h2>
                 <p style={{ textAlign: "left" }}>YumJunction is a website that provides recipes for food from your favorite TV shows and movies. We hope you enjoy! THIS WORKS !!!!!!</p>
             </div>
-            <Accordion>
+
+            {accordions.map(accordion => (
+              <Accordion key = {index}>
+                <AccordionItem
+                  headerText={accordion.headerTitle}
+                  bodyText={accordion.headerBody}
+                  imageAlt={accordion.imageAlt}
+                  imageSrc={accordion.imageSrc}
+                  linkTo={accordion.linkTo}
+                />
+              </Accordion>
+            ))}
+
+            </div>
+  );
+}; 
+            {/* <Accordion>
                 <AccordionItem
                     imageSrc={adventureTime}
                     imageAlt="adventure-time-logo"
@@ -69,7 +86,7 @@ function LandingPage() {
             <Accordion>
                 <AccordionItem
                     imageSrc={spongeboblogo}
-                    imageAlt="starwars-logo"
+                    imageAlt="spongebob-logo"
                     linkTo="/recipe6"
                     headerText="Spongebob Squarepants: Krabby Patty"
                     bodyText="In the underwater city of Bikini Bottom, Spongebob Squarepants works as a fry cook at the Krusty Krab, where he crafts the world-famous Krabby Patty. With a secret recipe known only to Mr. Krabs, the Krabby Patty is a mouthwatering blend of lettuce, cheese, tomatoes, tartar sauce, mayo, flour, tumeric, sea salt, land salt, barnacle shavings, the patty, mustard, ketchup, the secret formula, two buns, onions, and pickles. In this recipe, we'll be making our own Krabby Patty, with a few substitutions for the secret formula."
@@ -97,12 +114,7 @@ function LandingPage() {
             </Accordion>
 
 
-
-
-        
-    </div>
-  )
-}
+ */}
 
 
 export default LandingPage;
