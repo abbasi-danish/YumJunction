@@ -15,12 +15,14 @@ import Recipe7 from './pages/Recipe7/Recipe7';
 
 import TeamLanding from './pages/TeamLanding/TeamLanding';
 
+import { GroceryListProvider } from './components/GroceryList/grocerylistprovider';
 
 
 import TeamLanding from './pages/TeamLanding/TeamLanding';
 
 function App() {
     return (
+        <GroceryListProvider>
         <Router>
             <NavBar/>
             <Routes>
@@ -40,6 +42,7 @@ function App() {
 
             </Routes>
         </Router>
+        </GroceryListProvider>
     );
 }
 
