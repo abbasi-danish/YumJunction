@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+    import { render, screen, fireEvent } from '@testing-library/react';
 import Carousel from './Carousel';
 
 describe('Carousel', () => {
@@ -23,7 +23,7 @@ describe('Carousel', () => {
         render(<Carousel slides={slides} title={title} />);
         
         // Click the next button
-        fireEvent.click(screen.getByTestId('next-button'));
+        fireEvent.click(screen.getByTestId('nextSlide'));
 
         // Assert that the next slide is rendered
         expect(screen.getByAltText('Slide 1')).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe('Carousel', () => {
         render(<Carousel slides={slides} title={title} />);
         
         // Click the prev button
-        fireEvent.click(screen.getByTestId('prev-button'));
+        fireEvent.click(screen.getByTestId('prevSlide'));
 
         // Assert that the previous slide is rendered
         expect(screen.getByAltText('Slide 2')).toBeInTheDocument();
