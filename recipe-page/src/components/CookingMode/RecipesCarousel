@@ -1,0 +1,42 @@
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+
+// Import your recipe components
+import Recipe1 from '/home/codespace/cosi-103a-1/recipe-page/src/pages/Recipe1/Recipe1.js'; // Update the import paths as necessary
+import Recipe2 from '/home/codespace/cosi-103a-1/recipe-page/src/pages/Recipe2/Recipe2.js';
+import Recipe3 from '/home/codespace/cosi-103a-1/recipe-page/src/pages/Recipe3/Recipe3.js';
+import Recipe4 from '/home/codespace/cosi-103a-1/recipe-page/src/pages/Recipe4/Recipe4.js';
+import Recipe5 from '/home/codespace/cosi-103a-1/recipe-page/src/pages/Recipe5/Recipe5.js';
+import Recipe6 from '/home/codespace/cosi-103a-1/recipe-page/src/pages/Recipe6/Recipe6.js';
+import Recipe7 from '/home/codespace/cosi-103a-1/recipe-page/src/pages/Recipe7/Recipe7.js';
+
+const RecipesCarousel = () => {
+  return (
+    <Carousel showArrows={true} infiniteLoop={true} autoPlay={true} interval={5000} stopOnHover={true} dynamicHeight={true}>
+      <div>
+        <Recipe1 />
+      </div>
+      <div>
+        <Recipe2 />
+      </div>
+      <div>
+        <Recipe3 />
+      </div>
+      <div>
+        <Recipe4 />
+      </div>
+      <div>
+        <Recipe5 />
+      </div>
+      <div>
+        <Recipe6 />
+      </div>
+      <div>
+        <Recipe7 />
+      </div>
+    </Carousel>
+  );
+};
+
+export default RecipesCarousel;

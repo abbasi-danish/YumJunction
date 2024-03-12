@@ -1,5 +1,5 @@
-
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import testphoto from '../../images/testphoto.jpeg';
@@ -27,7 +27,11 @@ import model from '../../images/model.jpg';
 
 >>>>>>> 63e3f91a3f41dc759142c249c0bdf70415387140
 
+=======
+import model from '../../images/model.jpg';
+>>>>>>> 15f2ff021a1506e4c6e5c07fb92897a3acd13461
 import './TeamLanding.css'; 
+
 function TeamLanding() {
 
     const members = [
@@ -79,8 +83,12 @@ function TeamLanding() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default TeamLanding;
 >>>>>>> 02cc8a2300f6ec07ba5b5e889bd3451a6c5b162c
 =======
 export default TeamLanding;
 >>>>>>> shoppingcart-FitzWangaru
+=======
+export default TeamLanding;
+>>>>>>> 15f2ff021a1506e4c6e5c07fb92897a3acd13461

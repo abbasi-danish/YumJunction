@@ -17,7 +17,7 @@ describe('Recipe2', () => {
 
   test('renders the list of ingredients', () => {
     render(<Recipe2 />);
-    const ingredientsText = screen.getByText('Ingredients');
+    const ingredientsText = screen.getByText('Ingredients 🍗');
     const ingredients = screen.getAllByRole('listitem');
     expect(ingredientsText).toBeInTheDocument();
     expect(ingredients).toHaveLength(ingredients.length);
@@ -25,7 +25,7 @@ describe('Recipe2', () => {
 
   test('renders the list of directions', () => {
     render(<Recipe2 />);
-    const directionsText = screen.getByText('Instructions');
+    const directionsText = screen.getByText('Instructions 📝');
     const directions = screen.getAllByRole('listitem');
     expect(directionsText).toBeInTheDocument();
     expect(directions).toHaveLength(directions.length);
