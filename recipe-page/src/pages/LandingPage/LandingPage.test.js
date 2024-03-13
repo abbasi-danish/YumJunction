@@ -5,17 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { getByText } from '@testing-library/react';
 import fetchMock from 'jest-fetch-mock';
 
-describe('LandingPage', () => {
-test('renders YumJunction header', () => {
-  render(
-  <Router>
-    <LandingPage />
-  </Router> 
-  
-  );
-  const headerElement = screen.getAllByText(/YumJunction/i);
-  expect(headerElement.length).toBe(2);
-});
+
 const accordionItems = [
   {
       headerTitle: "Adventure Time: Perfect Sandwich",
@@ -75,6 +65,23 @@ const accordionItems = [
       link: '/recipe7'
   }
 ];
+
+describe('LandingPage', () => {
+  beforeEach(() => {
+    fetchMock.mockResponseOnce(JSON.stringify(accordionItems));
+  });
+  
+test('renders YumJunction header', () => {
+  render(
+  <Router>
+    <LandingPage />
+  </Router> 
+  
+  );
+  const headerElement = screen.getAllByText(/YumJunction/i);
+  expect(headerElement.length).toBe(2);
+});
+
 fetchMock.mockResponse(JSON.stringify(accordionItems));
 
 test('accordion expands and collapses when clicked', async () => {
