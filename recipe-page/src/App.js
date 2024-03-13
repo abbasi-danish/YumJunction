@@ -18,6 +18,7 @@ import TeamLanding from './pages/TeamLanding/TeamLanding';
 import { GroceryListProvider } from './components/GroceryList/grocerylistprovider';
 
 
+import TeamLanding from './pages/TeamLanding/TeamLanding';
 
 function App() {
     return (
@@ -37,10 +38,13 @@ function App() {
                 <Route path="/recipe6" element={<Recipe6 />} />
                 <Route path="/recipe7" element={<Recipe7 />} />
 
+                <Route path="/teamlanding" element={<TeamLanding />} />
+
             </Routes>
         </Router>
         </GroceryListProvider>
     );
 }
+
 
 export default App;
