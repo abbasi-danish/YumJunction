@@ -69,7 +69,7 @@ const accordionItems = [
 
 describe('LandingPage', () => {
   beforeEach(() => {
-    fetchMock.mockResponseOnce(JSON.stringify(accordionItems));
+    fetchMock.mockResponse(JSON.stringify(accordionItems));
   });
 
 test('renders YumJunction header', () => {
