@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(147, 182, 138);
+  background-color: rgb(74, 83, 149);
 }
 
 code {
@@ -113,4 +113,14 @@ nav a{
 .none{
   display: none;
 }
+@media only screen and (max-width: 1024px) {
+  .container{
+    width: 100%;
+  }
+}
 
+@media only screen and (max-width: 768px) {
+section{
+    padding: 40px 0px;
+  }
+}
