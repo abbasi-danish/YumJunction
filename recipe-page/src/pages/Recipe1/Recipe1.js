@@ -8,29 +8,7 @@ import Recipe1 from './Recipe1';
 
 
 function Recipe1() {
-    const ingredients = [
-        " 1 boneless ribeye (the size of your bread)",
-        " 2 sprigs thyme",
-        " 2 sprigs rosemary",
-        " Salt & freshly ground pepper",
-        " 1 lobster soul",
-        " 1 cup vegetable oil",
-        " Juice of 1 lemon",
-        " 3 egg yolks",
-        " 1/2 pound bacon",
-        " 1 Cornish game hen, deboned",
-        " 3 thinly sliced rounds of Vidalia onion, plus more for tear-gathering",
-        " 1 large, long sourdough loaf",
-        " 3 Tbsp cream cheese",
-        " 3 Tbsp fresh dill, picked",
-        " 1 dill pickle, sliced thinly",
-        " 1 egg, hard-boiled, peeled, and sliced",
-        " 10 thin slices of cucumber",
-        " 8 thin slices of Roma tomato",
-        " 2 tsp tears",
-        " 1 bird from the counter"
-    ];
-
+    const ingredients = [" 1 boneless ribeye (the size of your bread)", " 2 sprigs thyme", " 2 sprigs rosemary", " Salt & freshly ground pepper", " 1 lobster soul", " 1 cup vegetable oil", " Juice of 1 lemon", " 3 egg yolks", " 1/2 pound bacon", " 1 Cornish game hen, deboned", " 3 thinly sliced rounds of Vidalia onion, plus more for tear-gathering", " 1 large, long sourdough loaf", " 3 Tbsp cream cheese", " 3 Tbsp fresh dill, picked", " 1 dill pickle, sliced thinly", " 1 egg, hard-boiled, peeled, and sliced", " 10 thin slices of cucumber", " 8 thin slices of Roma tomato", " 2 tsp tears", " 1 bird from the counter"];
     const directions = [
         "Vacuum seal ribeye with thyme, rosemary, salt, and pepper, and place in a sous vide bath set at 135°F for 2 hours.",
         "Preheat oven to 350°F.  Steam lobster tail for for 8 minutes, remove meat and reserve for other applications.  Break up the shell into pieces and place in a high-powered blender along with vegetable oil, and blend for 30-60 seconds, or until lobster is finely ground.  Simmer mixture for 15 minutes, and strain through a fine mesh sieve.  Set aside to cool completely.",
