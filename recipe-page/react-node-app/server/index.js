@@ -220,8 +220,28 @@ let recipes = [
         }
 ];
 
+let userRecipes = [];
+
+
+app.post('/api/recipes', (req, res) => {
+        const newRecipe = req.body;
+        recipes.push(newRecipe);
+        res.status(201).send(newRecipe);
+
+});
+
 app.get("/api/recipes", (req, res) => {
     res.json(recipes);
+
+});
+app.post('/api/userRecipes', (req, res) => {
+    const newRecipe = req.body;
+    userRecipes.push(newRecipe);
+    res.status(201).send(newRecipe);
+});
+
+app.get("/api/userRecipes", (req, res) => {
+    res.send(userRecipes);
 
 });
 
