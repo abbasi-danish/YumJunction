@@ -4,6 +4,9 @@ import placeholder from '../../images/Pakistan.png';
 import './Accordion.css';
 
 const UserAccordionItem = ({title, description, ingredients, directions}) => {
+    if (!ingredients) {
+        return null; // or some fallback UI
+    }
     const ingredientsArray = ingredients.split(', ');
 return (
     <Accordion.Item eventKey="0">

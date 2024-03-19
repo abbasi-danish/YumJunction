@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { getByText } from '@testing-library/react';
 import fetchMock from 'jest-fetch-mock';
 
+
 fetchMock.enableMocks();
 
 const accordionItems = [
