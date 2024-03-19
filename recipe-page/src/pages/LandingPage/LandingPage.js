@@ -4,10 +4,20 @@ import logo from '../../images/logo.png';
 import './LandingPage.css';
 import Accordion from 'react-bootstrap/Accordion';
 import AccordionItem from '../../components/Accordion/AccordionItem';
-
+import UserAccordionitem from '../../components/Accordion/UserAccordionItem'
+import AddRecipeForm from '../../components/AddRecipeForm/AddRecipeForm';
 
 function LandingPage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+    const toggleForm = () => {
+      setIsFormOpen(!isFormOpen);
+  };
   const [accordions, setAccordions] = useState([]);
+  const [userRecipes, setUserRecipes] = useState([]);
+
+  // const addRecipe = (newRecipe) => {
+  //   setUserRecipes(prevRecipes => [...prevRecipes, newRecipe]);
+  // };
 
   useEffect(() => {
     fetch('http://localhost:3001/api/accordionItems')
@@ -16,7 +26,15 @@ function LandingPage() {
         console.log('Fetched data:', data);
         setAccordions(data);
       });
-  }, []);
+
+
+  fetch('http://localhost:3001/api/userRecipes')
+  .then(res => res.json())
+  .then(data => {
+    console.log('Fetched data:', data);
+    setUserRecipes(data);
+  });
+}, []);
 
   return (
     <div className="LandingPage">
@@ -25,6 +43,10 @@ function LandingPage() {
                     <img className="logo" src={logo} alt="logo" />
                 </div>
                 <h1 style={{ fontFamily: 'Impact' }}>YumJunction</h1>
+            </div>
+            <div>
+            <button onClick={toggleForm}>Add Recipe</button>
+            {isFormOpen && <AddRecipeForm />}
             </div>
             <div className = "website-description">
                 <h2 style={{ textAlign: "left" }}>Welcome!</h2>
@@ -42,6 +64,16 @@ function LandingPage() {
                 />
 
 </Accordion>
+            ))}
+            {userRecipes.map((recipe, index) => (
+              <Accordion key={index}>
+                <UserAccordionitem
+                  title={recipe.title}
+                  description={recipe.description}
+                  ingredients={recipe.ingredients}
+                  directions={recipe.directions}
+                />
+              </Accordion>
             ))}
             </div>
   );

@@ -5,6 +5,7 @@ import AddGroceryItemForm from '../GroceryList/addgroceryitem';
 import styles from '../GroceryList/grocerylist.module.css';
 
 export const NavBar = () => {
+    
     const context = useContext(GroceryListContext);
     // const { groceryList, handleIncrease, handleDecrease, handleRemoveItem, handleClearList } = useContext(GroceryListContext);
     const [show, setShow] = useState(false);
@@ -27,7 +28,6 @@ export const NavBar = () => {
                     </Nav>
                 </Container>
             </Navbar>
-
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Grocery List</Modal.Title>
@@ -52,6 +52,8 @@ export const NavBar = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
+
+            
         </>
     );
 };
