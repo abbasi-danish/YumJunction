@@ -28,7 +28,7 @@ const Carousel = ({ slides, title }) => {
                     className="carousel__img"
                 />
             ) : (
-                <p className="carousel__text">{slides[activeIndex].content}</p>
+                <p className="carousel__text carousel__text--large">{slides[activeIndex].content}</p>
             )}
             <button onClick={nextSlide} className="carousel__btn carousel__btn--next">
                 &gt;
