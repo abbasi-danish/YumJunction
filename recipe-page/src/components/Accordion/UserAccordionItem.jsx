@@ -7,7 +7,7 @@ const UserAccordionItem = ({title, description, ingredients, directions}) => {
     if (!ingredients) {
         return null; // or some fallback UI
     }
-    const ingredientsArray = ingredients.split(', ');
+    // const ingredientsArray = ingredients.split(', ');
 return (
     <Accordion.Item eventKey="0">
         <Accordion.Header className='custom-header'>
@@ -16,7 +16,7 @@ return (
         </Accordion.Header>
         <Accordion.Body>
             <p>{description}</p>
-            <p>Ingredients: {ingredientsArray.join(', ')}</p>
+            <p>Ingredients: {ingredients.join(', ')}</p>
             <p>Directions: {directions} </p>
         </Accordion.Body>
     </Accordion.Item>
