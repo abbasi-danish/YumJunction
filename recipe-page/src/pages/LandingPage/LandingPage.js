@@ -39,14 +39,16 @@ function LandingPage() {
   return (
     <div className="LandingPage">
       <div className="header" style={{ borderBottom: "3px solid black", width: "100%"}}>
-                <div className="logo-container">
-                    <img className="logo" src={logo} alt="logo" />
-                </div>
-                <h1 style={{ fontFamily: 'Impact' }}>YumJunction</h1>
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <div>
+                <button onClick={toggleForm}>Add Recipe</button>
+                {isFormOpen && <AddRecipeForm />}
+              </div>
             </div>
-            <div>
-            <button onClick={toggleForm}>Add Recipe</button>
-            {isFormOpen && <AddRecipeForm />}
+                <div className="logo-container">
+                    <img className="logo" style={{ float: 'left' }} src={logo} alt="logo" />
+                </div>
+                <h1 style={{ fontFamily: 'Impact', paddingTop: '30px' }}>YumJunction</h1>
             </div>
             <div className = "website-description">
                 <h2 style={{ textAlign: "left" }}>Welcome!</h2>

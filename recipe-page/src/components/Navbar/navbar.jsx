@@ -16,16 +16,14 @@ export const NavBar = () => {
     return (
         <>
             <Navbar bg="dark" variant="dark">
-                <Container>
-                    <Nav className="me-auto">
+                <Container fluid>
+                    <Nav className="justify-content-end">
                         <Nav.Link href="/">Main Page</Nav.Link>
                         <Nav.Link href="/TeamLanding">Team Page</Nav.Link>
                     </Nav>
-                    <Nav className="ml-auto">
-                        <Button variant="primary" onClick={handleShow}>
-                            Grocery List
-                        </Button>
-                    </Nav>
+                    <Button variant="primary" style={{ float: 'left' }} onClick={handleShow}>
+                        Grocery List
+                    </Button>
                 </Container>
             </Navbar>
             <Modal show={show} onHide={handleClose}>

@@ -29,7 +29,9 @@ function TeamLanding() {
     return (
         <div className="Our__team">
                 <div className="header" style={{ borderBottom: "3px solid black", width: "100%" }}>
-                    <h1>Meet The Team</h1>
+                    <div className="title" style={{ display: "flex", justifyContent: "center" }}>
+                        <h1>Meet The Team</h1>
+                    </div>
                 </div>
             <div className="container">
                 <div className="team__wrapper">
