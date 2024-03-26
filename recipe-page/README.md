@@ -8,6 +8,37 @@ The application is designed with a user-friendly interface, making it easy for u
 
 Whether you're a seasoned chef looking for inspiration or a beginner starting your culinary journey, YumJunction is the perfect place to find your next favorite dish.
 
+
+# Running Web Application with Backend and Frontend
+
+1. Navigate to the backend server: `cd react-node-app/server`
+2. Start the backend server: `npm start`
+
+The back endserver should now be running at http://localhost:3001
+
+
+## Front End Startup
+1. Navigate back to the root  directory (recipe-page) and run: `npm start`
+2. Start the development server: `npm start`
+
+After running this command, you should be able to see the YumJunction application running in your web browser at http://localhost:3000.
+
+NOTE: The instructions listed above are crucial to running YumJunction web application
+
+# Current Features 
+1. Navbar with smooth access to other parts of our web application which include: team-page and grocery list feature
+2. Grocery List: Allows users to enter in any ingredient they've found out of all the recipes on the page
+3. Add Recipe: Allows ussers to enter in any recipe they want with restrictions on how input format. 
+
+Example of how to input recipe: 
+{
+    "title": "Chocolate Cake",
+    "description": "A delicious and moist chocolate cake.",
+    "ingredients": ["200g flour", "200g sugar", "100g cocoa powder", "3 eggs", "200ml milk"],
+    "directions": "1. Preheat the oven to 180C. 2. Mix all the ingredients together. 3. Pour the batter into a cake tin. 4. Bake for 30 minutes."
+}
+ 4. Cooking Mode which is available on every recipe page (that are not user added) which gives users an enhanced view on cooking each recipe
+
 # Accessing Recipe Pages:
 
 To access the recipe page for a specific dish, simply click on the title of the dish from the main page. This will take you to the detailed recipe page where you can find step-by-step instructions, ingredient quantities, cooking times, and additional tips and tricks.
