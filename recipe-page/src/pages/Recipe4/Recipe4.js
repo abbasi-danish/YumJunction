@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import frogfood from '../../images/frogfood.jpg';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
+import { Button } from 'react-bootstrap';
 
 function Recipe4() {
     const ingredients = ["1 (6 ounce) can tomato paste, 1/2 onion, chopped, 1/4 cup minced garlic, 3/4 cup water, 4 tablespoons olive oil, divided, salt and ground black pepper to taste, 1 small eggplant, trimmed and very thinly sliced, 1 zucchini, trimmed and very thinly sliced, 1 yellow squash, trimmed and very thinly sliced, 1 red bell pepper, cored and very thinly sliced, 1 yellow bell pepper, cored and very thinly sliced, 1 teaspoon fresh thyme leaves, 3 tablespoons mascarpone cheese"];
@@ -34,10 +35,12 @@ function Recipe4() {
                             }))}
                             title='Cooking Mode'
                         />
-                        <button onClick={exitCookingMode}>Exit Cooking Mode</button>
+                        <Button style={{ backgroundColor: '#333333' }} onClick={exitCookingMode}> Exit Cooking Mode
+            </Button>
                     </div>
                 ) : (
-                    <button onClick={toggleCookingMode}>Cooking Mode</button>
+                    <Button style={{ backgroundColor: '#333333' }} onClick={toggleCookingMode}> Cooking Mode
+                    </Button>
                 )}
             </div>
             {!cookingMode && (

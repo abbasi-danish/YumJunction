@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import banana from '../../images/FoodofStar.png';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
+import { Button } from 'react-bootstrap';
 
 function Recipe3() {
     const ingredients = ["4 ripe bananas, Yellow food coloring"];
@@ -34,10 +35,12 @@ function Recipe3() {
                             }))}
                             title='Cooking Mode'
                         />
-                        <button onClick={exitCookingMode}>Exit Cooking Mode</button>
+                        <Button style={{ backgroundColor: '#333333' }} onClick={exitCookingMode}> Exit Cooking Mode
+            </Button>
                     </div>
                 ) : (
-                    <button onClick={toggleCookingMode}>Cooking Mode</button>
+                    <Button style={{ backgroundColor: '#333333' }} onClick={toggleCookingMode}> Cooking Mode
+                    </Button>
                 )}
             </div>
             {!cookingMode && (

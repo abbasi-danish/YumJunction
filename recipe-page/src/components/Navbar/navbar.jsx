@@ -42,7 +42,7 @@ export const NavBar = () => {
                     ))}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => context && context.handleClearList()}>
+                <Button variant="secondary" onClick={() => context && context.handleClearList()}>
                         Clear List
                     </Button>
                     <Button variant="primary" onClick={handleClose}>
@@ -50,6 +50,8 @@ export const NavBar = () => {
                     </Button>
                 </Modal.Footer>
             </Modal>
+
+            
         </>
     );
 };

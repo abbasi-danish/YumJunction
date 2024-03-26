@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import perfectSandwich from '../../images/perfect-sandwich.jpg';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
+import { Button } from 'react-bootstrap';
 
 function Recipe1() {
     const ingredients = [" 1 boneless ribeye (the size of your bread)", " 2 sprigs thyme", " 2 sprigs rosemary", " Salt & freshly ground pepper", " 1 lobster soul", " 1 cup vegetable oil", " Juice of 1 lemon", " 3 egg yolks", " 1/2 pound bacon", " 1 Cornish game hen, deboned", " 3 thinly sliced rounds of Vidalia onion, plus more for tear-gathering", " 1 large, long sourdough loaf", " 3 Tbsp cream cheese", " 3 Tbsp fresh dill, picked", " 1 dill pickle, sliced thinly", " 1 egg, hard-boiled, peeled, and sliced", " 10 thin slices of cucumber", " 8 thin slices of Roma tomato", " 2 tsp tears", " 1 bird from the counter"];
@@ -36,10 +37,13 @@ function Recipe1() {
                             }))}
                             title='Cooking Mode'
                         />
-                        <button onClick={exitCookingMode}>Exit Cooking Mode</button>
+                      <Button style={{ backgroundColor: '#333333' }} onClick={exitCookingMode}> Exit Cooking Mode
+                    </Button>
                     </div>
                 ) : (
-                    <button onClick={toggleCookingMode}>Cooking Mode</button>
+                    <Button style={{ backgroundColor: '#333333' }} onClick={toggleCookingMode}> Cooking Mode
+                    </Button>
+                   
                 )}
             </div>
             {!cookingMode && (

@@ -4,6 +4,8 @@ import flan from '../../images/courage-flan.png';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
 
+import {Button} from 'react-bootstrap';
+
 function Recipe2() {
   const ingredients = ["1 cup granulated sugar", "1/4 cup water", "4 large eggs", "2 cups whole milk", "1 teaspoon vanilla extract"];
   const directions = [
@@ -38,10 +40,14 @@ function Recipe2() {
               }))}
               title='Cooking Mode'
             />
-            <button onClick={exitCookingMode}>Exit Cooking Mode</button>
+            <Button style={{ backgroundColor: '#333333' }} onClick={exitCookingMode}> Exit Cooking Mode
+            </Button>
+            
           </div>
         ) : (
-          <button onClick={toggleCookingMode}>Cooking Mode</button>
+          <Button style={{ backgroundColor: '#333333' }} onClick={toggleCookingMode}> Cooking Mode
+            </Button>
+
         )}
       </div>
       {!cookingMode && (

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import krabbypatty from '../../images/krabbypatty.jpg';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
+import { Button } from 'react-bootstrap';
 
 function Recipe6() {
     const ingredients = ["2 cups ground beef", "1/4 cup breadcrumbs", "1/4 cup chopped onions", "1/4 cup chopped pickles", "1/4 cup ketchup", "1/4 cup mustard", "1/4 teaspoon salt", "1/4 teaspoon pepper", "4 hamburger buns"];
@@ -33,10 +34,12 @@ function Recipe6() {
                             }))}
                             title='Cooking Mode'
                         />
-                        <button onClick={exitCookingMode}>Exit Cooking Mode</button>
+                         <Button style={{ backgroundColor: '#333333' }} onClick={exitCookingMode}> Exit Cooking Mode
+            </Button>
                     </div>
                 ) : (
-                    <button onClick={toggleCookingMode}>Cooking Mode</button>
+                    <Button style={{ backgroundColor: '#333333' }} onClick={toggleCookingMode}> Cooking Mode
+                    </Button>
                 )}
             </div>
             {!cookingMode && (
