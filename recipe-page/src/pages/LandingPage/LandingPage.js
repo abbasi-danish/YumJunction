@@ -6,6 +6,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import AccordionItem from '../../components/Accordion/AccordionItem';
 import UserAccordionitem from '../../components/Accordion/UserAccordionItem'
 import AddRecipeForm from '../../components/AddRecipeForm/AddRecipeForm';
+import { Button } from 'react-bootstrap';
 
 function LandingPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -39,7 +40,7 @@ function LandingPage() {
       <div className="header" style={{ borderBottom: "3px solid black", width: "100%"}}>
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
               <div>
-                <button onClick={toggleForm}>Add Recipe</button>
+                <Button style={{ backgroundColor: '#333333' }} onClick={toggleForm}>Add Recipe</Button>
                 {isFormOpen && <AddRecipeForm />}
               </div>
             </div>
