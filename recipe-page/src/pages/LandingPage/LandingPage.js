@@ -15,9 +15,7 @@ function LandingPage() {
   const [accordions, setAccordions] = useState([]);
   const [userRecipes, setUserRecipes] = useState([]);
 
-  // const addRecipe = (newRecipe) => {
-  //   setUserRecipes(prevRecipes => [...prevRecipes, newRecipe]);
-  // };
+
 
   useEffect(() => {
     fetch('http://localhost:3001/api/accordionItems')
