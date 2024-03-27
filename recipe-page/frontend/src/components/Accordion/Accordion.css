@@ -1,0 +1,72 @@
+/* Accordion.css */
+
+.accordion {
+  width: 100%;
+}
+
+.accordion .accordion-item {
+  width: 100%;
+}
+
+.accordion .accordion-header {
+  width: 100%;
+}
+
+.accordion .accordion-body {
+  width: 100%;
+}
+.accordion {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --bs-accordion-btn-bg: #0e4fab; /* dark blue */
+  --bs-accordion-active-bg: #3F51B5; /* slightly lighter, but still dark blue */
+
+}
+
+
+
+.accordion .accordion-item {
+  background-color: #000000; /* dark gray/black */
+  border:#000000;
+  margin-bottom: 0;
+}
+
+.accordion .accordion-header{
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+.accordion .accordion-header img.header-image {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.accordion .accordion-header a {
+  color: #ffffff; /* white link text */
+  text-decoration:hsl(from color h s l);
+}
+
+.accordion .accordion-header:hover a {
+  color: #03b3ff
+}
+
+
+
+.accordion .accordion-body {
+  padding: 15px 20px;
+  font-size: 16px;
+  color: #fff; /* white text */
+  line-height: 1.5;
+  background-color: #8888ff; /* slightly lighter, but still dark blue background */
+  border: none;
+}
+
