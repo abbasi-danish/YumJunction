@@ -3,6 +3,7 @@ import '../../index.css';
 import flan from '../../images/courage-flan.png';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
+import SearchBar from '../../components/SearchAPI/SearchBar';
 
 function Recipe2() {
   const ingredients = ["1 cup granulated sugar", "1/4 cup water", "4 large eggs", "2 cups whole milk", "1 teaspoon vanilla extract"];
@@ -27,6 +28,7 @@ function Recipe2() {
 
   return (
     <div>
+      <SearchBar />
       <div className='cookingMode'>
         {cookingMode ? (
           <div>

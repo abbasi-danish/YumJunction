@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ratFood from '../../images/ratFood.jpg';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
+import SearchBar from '../../components/SearchAPI/SearchBar';
 
 function Recipe7() {
     const [cookingMode, setCookingMode] = useState(false);
@@ -40,6 +41,7 @@ function Recipe7() {
 
     return (
         <div>
+            <SearchBar />
             <div className='cookingMode'>
                 {cookingMode ? (
                     <div>

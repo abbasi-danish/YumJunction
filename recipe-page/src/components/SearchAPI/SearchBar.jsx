@@ -1,17 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./SearchBar.css";
 
-
+ 
 function SearchBar() {
+    const [query, setQuery] = useState(""); // holds the user's search query
+
     useEffect(() => {
-        fetch ('https://api.spoonacular.com/recipes/complexSearch?apiKey=4e0b1f3e2c7e4b5a8f7c3f6f9c8b3b5a&query=burger')
+        if (query !== "") {
+            const API_KEY = "yPZbuuSRScoZKZaObRpgzJbG1K0OPP3frc7Dhumi";
+            const url = `https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${API_KEY}&query=${query}`;
+        fetch (url)
         .then(res => res.json())
-        .then(data => console.log(data))
-        .then(err => console.log(err))
-    },[]);
+        .then(data => {
+            console.log(data);
+        })
+        .catch(err => console.error(err)); // Catch and log any errors
+    }
+}, [query]); // This effect depends on `query` and runs whenever `query` changes
     return (
         <div className="search">
-            <input type ="text " placeholder="Search here..."/>
+            <input type ="text" 
+            placeholder="Search here..."
+            onChange={(e) => setQuery(e.target.value)}
+            />
         </div>
     );
 }
