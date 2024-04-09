@@ -3,6 +3,7 @@ import baconPancakes from '../../images/bacon-pancakes.jpg';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
 import { Button } from 'react-bootstrap';
+import SearchBar from '../../components/SearchAPI/SearchBar';
 
 function Recipe5() {
     const ingredients = ["285g all-purpose flour", "35g sugar", "1 ½ tsp baking powder", "1 ½ tsp baking soda", "Kosher salt", "2 ½ cups buttermilk", "2 eggs", "3 Tbsp melted butter", "Bacon", "Maple Syrup"];
@@ -26,6 +27,7 @@ function Recipe5() {
 
     return (
         <div>
+            <SearchBar />
             <div className='cookingMode'>
                 {cookingMode ? (
                     <div>

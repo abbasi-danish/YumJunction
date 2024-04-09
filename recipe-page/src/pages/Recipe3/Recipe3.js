@@ -3,6 +3,7 @@ import banana from '../../images/FoodofStar.png';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
 import { Button } from 'react-bootstrap';
+import SearchBar from '../../components/SearchAPI/SearchBar';
 
 function Recipe3() {
     const ingredients = ["4 ripe bananas, Yellow food coloring"];
@@ -24,6 +25,7 @@ function Recipe3() {
 
     return (
         <div>
+            <SearchBar />
             <div className='cookingMode'>
                 {cookingMode ? (
                     <div>

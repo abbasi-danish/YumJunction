@@ -3,6 +3,7 @@ import '../../index.css';
 import flan from '../../images/courage-flan.png';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
+import SearchBar from '../../components/SearchAPI/SearchBar';
 
 import {Button} from 'react-bootstrap';
 
@@ -29,6 +30,7 @@ function Recipe2() {
 
   return (
     <div>
+      <SearchBar />
       <div className='cookingMode'>
         {cookingMode ? (
           <div>
