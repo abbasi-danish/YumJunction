@@ -7,7 +7,7 @@ function SearchBar() {
 
     useEffect(() => {
         if (query !== "") {
-            const API_KEY = "yPZbuuSRScoZKZaObRpgzJbG1K0OPP3frc7Dhumi";
+            const API_KEY = "G9HgUhZS9lI3Uht1IuivfUBF5r2oUtPkpfyLRgLf";
             const url = `https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${API_KEY}&query=${query}`;
         fetch (url)
         .then(res => res.json())
