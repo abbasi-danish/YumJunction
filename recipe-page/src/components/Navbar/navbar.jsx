@@ -42,10 +42,10 @@ export const NavBar = () => {
                     ))}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={context && context.handleClearList}>
+                <Button variant="secondary" onClick={() => context && context.handleClearList()}>
                         Clear List
                     </Button>
-                    <Button variant="primary" onClick={context &&context.handleClose}>
+                    <Button variant="primary" onClick={handleClose}>
                         Close
                     </Button>
                 </Modal.Footer>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import perfectSandwich from '../../images/perfect-sandwich.jpg';
 import NewPage from '../../components/NewPage/NewPage';
 import Carousel from '../../components/Carousel/Carousel';
+import { Button } from 'react-bootstrap';
 import SearchBar from '../../components/SearchAPI/SearchBar';
 
 function Recipe1() {
@@ -38,10 +39,13 @@ function Recipe1() {
                             }))}
                             title='Cooking Mode'
                         />
-                        <button onClick={exitCookingMode}>Exit Cooking Mode</button>
+                      <Button style={{ backgroundColor: '#333333' }} onClick={exitCookingMode}> Exit Cooking Mode
+                    </Button>
                     </div>
                 ) : (
-                    <button onClick={toggleCookingMode}>Cooking Mode</button>
+                    <Button style={{ backgroundColor: '#333333' }} onClick={toggleCookingMode}> Cooking Mode
+                    </Button>
+                   
                 )}
             </div>
             {!cookingMode && (

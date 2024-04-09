@@ -1,4 +1,7 @@
+// import './Carousel.css'; 
 import React, { useState } from 'react';
+import { Card } from 'react-bootstrap'; // Import the Card component
+import {Button} from 'react-bootstrap'; // Import the Button component
 
 const Carousel = ({ slides, title }) => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -18,9 +21,8 @@ const Carousel = ({ slides, title }) => {
     return (
         <div className="carousel">
             <h1>{title}</h1>
-            <button onClick={prevSlide} className="carousel__btn carousel__btn--prev">
-                &lt;
-            </button>
+            <Button style={{ backgroundColor: '#333333' }} onClick={prevSlide}> Previous Slide
+            </Button>
             {slides[activeIndex].type === 'image' ? (
                 <img
                     src={slides[activeIndex].content}
@@ -28,11 +30,12 @@ const Carousel = ({ slides, title }) => {
                     className="carousel__img"
                 />
             ) : (
-                <p className="carousel__text carousel__text--large">{slides[activeIndex].content}</p>
+                <Card style={{ backgroundColor: '#0e4fab' }}> {/* Add inline style to set the background color */}
+                    <p className="carousel__text carousel__text--large">{slides[activeIndex].content}</p>
+                </Card>
             )}
-            <button onClick={nextSlide} className="carousel__btn carousel__btn--next">
-                &gt;
-            </button>
+            <Button style={{ backgroundColor: '#333333' }} onClick={nextSlide}> Next Slide
+            </Button>
         </div>
     );
 };
