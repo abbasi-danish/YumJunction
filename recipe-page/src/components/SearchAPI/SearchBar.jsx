@@ -1,30 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./SearchBar.css";
 
  
 function SearchBar() {
-    const [query, setQuery] = useState(""); // holds the user's search query
+    const [userInput, setUserInput] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+  
+    const handleChange = (event) => {
+      setUserInput(event.target.value);
+    };
+  
+    const handleSearch = async () => {
+      const apiKey = "G9HgUhZS9lI3Uht1IuivfUBF5r2oUtPkpfyLRgLf"; // Replace with your actual API key
+      const url = `https://api.nal.usda.gov/fdc/v1/foods/search?query=${userInput}&api_key=${apiKey}`;
+  
+      const response = await fetch(url);
+      const data = await response.json();
+  
+      setSearchResults(data.foods); // Assuming "foods" holds search results
+    };
 
-    useEffect(() => {
-        if (query !== "") {
-            const API_KEY = "G9HgUhZS9lI3Uht1IuivfUBF5r2oUtPkpfyLRgLf";
-            const url = `https://api.nal.usda.gov/fdc/v1/foods/search?api_key=${API_KEY}&query=${query}`;
-        fetch (url)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
-        .catch(err => console.error(err)); // Catch and log any errors
-    }
-}, [query]); // This effect depends on `query` and runs whenever `query` changes
-    return (
-        <div className="search">
-            <input type ="text" 
-            placeholder="Search here..."
-            onChange={(e) => setQuery(e.target.value)}
-            />
-        </div>
-    );
+return (
+    <div>
+      <input type="text" value={userInput} onChange={handleChange} />
+      <button onClick={handleSearch}>Search</button>
+      {searchResults.length > 0 && (
+        <ul>
+          {searchResults.map((item) => (
+            <li key={item.fdcId}>{item.description}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 }
 
 export default SearchBar;
