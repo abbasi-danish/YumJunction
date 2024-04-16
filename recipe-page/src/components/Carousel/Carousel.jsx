@@ -26,7 +26,7 @@ const Carousel = ({ slides, title }) => {
             {slides[activeIndex].type === 'image' ? (
                 <img
                     src={slides[activeIndex].content}
-                    alt={`Slide ${activeIndex}`}
+                    alt={`Slide`}
                     className="carousel__img"
                 />
             ) : (
