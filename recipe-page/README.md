@@ -28,7 +28,7 @@ NOTE: The instructions listed above are crucial to running YumJunction web appli
 # Current Features 
 1. Navbar with smooth access to other parts of our web application which include: team-page and grocery list feature
 2. Grocery List: Allows users to enter in any ingredient they've found out of all the recipes on the page
-3. Add Recipe: Allows ussers to enter in any recipe they want with restrictions on how input format. 
+3. Add Recipe: Allows ussers to enter in any recipe they want with restrictions on how input format.
 
 Example of how to input recipe: 
 {
@@ -38,6 +38,12 @@ Example of how to input recipe:
     "directions": "1. Preheat the oven to 180C. 2. Mix all the ingredients together. 3. Pour the batter into a cake tin. 4. Bake for 30 minutes."
 }
  4. Cooking Mode which is available on every recipe page (that are not user added) which gives users an enhanced view on cooking each recipe
+
+ 5. **Microsoft Azure Alert Rules:** We have the following rules setup on Azure: 
+
+    - Cost alert: If the allocated cost is exceeded then Azure will send out an alert
+    - Database updated: If our SQL database is updated then Azure will also send out an alert
+    - Activity Monitor Alert: Any activity is logged and will be sent out as an alert. For example, if the application is deployed that will also be sent out as an alert. 
 
 # Accessing Recipe Pages:
 
