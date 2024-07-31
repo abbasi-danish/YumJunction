@@ -1,5 +1,3 @@
-# cosi-103a
-
 # YumJunction Recipe Web Application
 This project is a web application built using React which allows users to browse through pre-added recipes as well as add their own. It has different functionalities such as allowing users to keep track of ingredients using the grocery list feature, enter cooking mode for each recipe, and more! See for more information in the ReadMe file under recipe-page directory. 
 
